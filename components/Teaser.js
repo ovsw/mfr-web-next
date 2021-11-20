@@ -1,8 +1,8 @@
-import React from "react";
-import { sbEditable } from "@storyblok/storyblok-editable";
+import React from "react"
+import { sbEditable } from "@storyblok/storyblok-editable"
 
 const Teaser = ({ blok }) => {
-  return <h2 {...sbEditable(blok)}>{blok.headline}</h2>;
-};
+  return <h2 {...sbEditable(blok)}>{blok.headline}</h2>
+}
 
-export default Teaser;
+export default Teaser
