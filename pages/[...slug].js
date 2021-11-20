@@ -53,8 +53,13 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export async function getStaticPaths() {
+  let sbLinkParams = {
+    // change to `published` to load the published version
+    version: "draft", // or published
+    cv: Date.now(),
+  };
   // get all links from Storyblok
-  let { data } = await Storyblok.get("cdn/links/");
+  let { data } = await Storyblok.get("cdn/links/", sbLinkParams);
 
   let paths = [];
   // create a routes for every link

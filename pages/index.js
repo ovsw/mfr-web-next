@@ -32,7 +32,8 @@ export async function getStaticProps({ preview = false }) {
   let slug = "home";
   // load the published content outside of the preview mode
   let sbParams = {
-    version: "draft", // or 'published'
+    // version: process.env.NODE_ENV == "production" ? "published" : "draft", // or 'published'
+    version: "published", // or 'published'
   };
 
   if (preview) {
