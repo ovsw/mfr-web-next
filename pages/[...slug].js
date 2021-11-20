@@ -6,8 +6,8 @@ import styles from "../styles/Home.module.css";
 import Storyblok, { useStoryblok } from "../lib/storyblok";
 
 export default function Page({ story, preview }) {
-  const enableBridge = true; // load the storyblok bridge everywhere
-  // const enableBridge = preview; // enable bridge only in prevew mode
+  // const enableBridge = true; // load the storyblok bridge everywhere
+  const enableBridge = preview; // enable bridge only in prevew mode
   story = useStoryblok(story, enableBridge);
 
   return (
