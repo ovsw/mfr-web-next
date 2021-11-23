@@ -18,10 +18,6 @@ export default function Home({ story, preview }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <h1>{story ? story.name : "My Site"}</h1>
-      </header>
-
       <DynamicComponent blok={story.content} />
     </div>
   )
