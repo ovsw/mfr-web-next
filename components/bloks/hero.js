@@ -6,14 +6,14 @@
 // - is_tall: Boolean - adds extra padding to the hero to make it bigger (ie: homepage)
 
 // import * as React from "react"
-import { Image } from "@storyofams/storyblok-toolkit";
-import RichTextRenderer from "../richTextRenderer";
-import { blockIterator } from "../../utils/blockIterator";
+import { Image } from "@storyofams/storyblok-toolkit"
+import RichTextRenderer from "@/components/richTextRenderer"
+import { blockIterator } from "../../utils/blockIterator"
 
 const Hero = ({ blok: hero }) => {
   // console.log("hero component", hero);
 
-  const { background_image, is_tall, content } = hero;
+  const { background_image, is_tall, content } = hero
 
   return (
     <div>
@@ -78,7 +78,7 @@ const Hero = ({ blok: hero }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
