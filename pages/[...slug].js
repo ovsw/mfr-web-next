@@ -1,5 +1,5 @@
 import React from "react"
-import DynamicComponent from "@/components/dynamicComponent"
+import DynamicComponent from "@/components/Dc"
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
 

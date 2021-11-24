@@ -3,7 +3,7 @@
 // and maps them to the DynamicComponent that renders out the respective bloks
 
 import * as React from "react"
-import DynamicComponent from "@/components/dynamicComponent"
+import DynamicComponent from "@/components/Dc"
 
 export function blockIterator(bloksArr) {
   // check that array is not empty

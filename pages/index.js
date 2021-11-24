@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 
 // The Storyblok Client & hook
 import Storyblok, { useStoryblok } from "../lib/storyblok"
-import DynamicComponent from "@/components/dynamicComponent"
+import DynamicComponent from "@/components/Dc"
 
 export default function Home({ story, preview }) {
   // const enableBridge = true; // load the storyblok bridge everywhere

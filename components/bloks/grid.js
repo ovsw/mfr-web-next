@@ -1,5 +1,5 @@
 // import * as React from "react"
-import DynamicComponent from "../dynamicComponent";
+import DynamicComponent from "../Dc"
 
 const Grid = ({ blok }) => (
   <div>
@@ -7,13 +7,13 @@ const Grid = ({ blok }) => (
     <p>
       {blok.columns.length > 0 && (
         <div style={{ display: "flex", gap: "2em" }}>
-          {blok.columns.map((column) => (
+          {blok.columns.map(column => (
             <DynamicComponent blok={column} key={blok._uid} />
           ))}
         </div>
       )}
     </p>
   </div>
-);
+)
 
-export default Grid;
+export default Grid
