@@ -4,8 +4,6 @@
 // image - the card image
 // content - card contents
 
-import * as React from "react"
-
 const CardLayout = ({ image, content }) => {
   // console.log("card component", card)
 

@@ -5,10 +5,10 @@
 // bloks: "content" - card contents
 
 // import * as React from "react"
-import { blockIterator } from "../../utils/blockIterator";
-import { Image } from "@storyofams/storyblok-toolkit";
+import { blockIterator } from "../../utils/blockIterator"
+import { Image } from "@storyofams/storyblok-toolkit"
 
-import CardLayout from "../components/card-layout";
+import CardLayout from "@/components/common/card-layout"
 
 const Card = ({ blok: card }) => {
   // console.log("card component", card)
@@ -20,7 +20,7 @@ const Card = ({ blok: card }) => {
       }
       content={blockIterator(card.content)}
     />
-  );
-};
+  )
+}
 
-export default Card;
+export default Card
