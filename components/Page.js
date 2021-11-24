@@ -1,4 +1,4 @@
-import DynamicComponent from "./dynamicComponent"
+import DynamicComponent from "./Dc"
 
 const Page = ({ blok }) => (
   <main>

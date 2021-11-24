@@ -43,7 +43,7 @@ const BlokComponents = {
   "row-testimonials": RowTestimonials,
 }
 
-const DynamicComponent = ({ blok }) => {
+const Dc = ({ blok }) => {
   const BlokComponent = BlokComponents[blok.component]
 
   if (BlokComponent) {
@@ -61,4 +61,4 @@ const DynamicComponent = ({ blok }) => {
   )
 }
 
-export default DynamicComponent
+export default Dc
