@@ -5,6 +5,8 @@ import { sbEditable } from "@storyblok/storyblok-editable"
 import Teaser from "./bloks/teaser"
 import Grid from "./bloks/grid"
 import Page from "./Page"
+import BlogPost from "./BlogPost"
+import MenuItemPage from "./MenuItemPage"
 
 import Section from "./bloks/section"
 import RowSingleColumn from "./bloks/row-single-column"
@@ -21,9 +23,13 @@ import Hero from "./bloks/hero"
 import RowTwoColumnsCta from "./bloks/row-two-columns-cta"
 import RowBigImage from "./bloks/row-big-image"
 import RowTestimonials from "./bloks/row-testimonials"
+import RowMenuListing from "./bloks/row-menu-listing"
+import Hoagie from "./bloks/hoagie"
 
 const BlokComponents = {
   page: Page,
+  "blog-post": BlogPost,
+  "menu-item-page": MenuItemPage,
   teaser: Teaser,
   grid: Grid,
   section: Section,
@@ -41,6 +47,8 @@ const BlokComponents = {
   "row-two-columns-cta": RowTwoColumnsCta,
   "row-big-image": RowBigImage,
   "row-testimonials": RowTestimonials,
+  "row-menu-listing": RowMenuListing,
+  hoagie: Hoagie,
 }
 
 const Dc = ({ blok }) => {

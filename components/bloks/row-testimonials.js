@@ -6,16 +6,16 @@
 // bool: "is_reversed"
 
 // import * as React from "react"
-import { blockIterator } from "../../utils/blockIterator";
+import { blockIterator } from "../../utils/blockIterator"
 
 export default function Home({ blok: rowTestimonials }) {
-  const { testimonials_list } = rowTestimonials;
+  const { testimonials_list } = rowTestimonials
 
-  console.log("testimonials_list", testimonials_list);
+  // console.log("testimonials_list", testimonials_list);
   return (
     <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pt-10 gap-6">
-      {testimonials_list.map((testimonial) => (
-        <div className="bg-white">
+      {testimonials_list.map(testimonial => (
+        <div className="bg-white" key={testimonial._uid}>
           <div className="w-full relative flex flex-col items-center md:p-12 p-6">
             <div className="text-gray-600  flex flex-col ">
               <QuoteSvg />
@@ -41,7 +41,7 @@ export default function Home({ blok: rowTestimonials }) {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
 const QuoteSvg = () => (
@@ -73,7 +73,7 @@ const QuoteSvg = () => (
       </clipPath>
     </defs>
   </svg>
-);
+)
 
 const DownArrowSvg = () => (
   <svg
@@ -144,4 +144,4 @@ const DownArrowSvg = () => (
       </filter>
     </defs>
   </svg>
-);
+)

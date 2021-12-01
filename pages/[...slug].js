@@ -1,4 +1,3 @@
-import React from "react"
 import DynamicComponent from "@/components/Dc"
 import Head from "next/head"
 import styles from "../styles/Home.module.css"
@@ -33,6 +32,7 @@ export async function getStaticProps({ params, preview = false }) {
   let sbParams = {
     // change to `published` to load the published version
     version: "draft", // or published
+    // resolve_relations: "row-menu-listing.menu_items",
   }
 
   if (preview) {

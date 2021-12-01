@@ -4,8 +4,10 @@ import styles from "../styles/Home.module.css"
 // The Storyblok Client & hook
 import Storyblok, { useStoryblok } from "../lib/storyblok"
 import DynamicComponent from "@/components/Dc"
+import { blockIterator } from "utils/blockIterator"
 
-export default function Home({ story, preview }) {
+export default function Home({ story, preview, recentPosts }) {
+  // console.log("recentPosts", recentPosts)
   // const enableBridge = true; // load the storyblok bridge everywhere
   const enableBridge = preview // enable bridge only in prevew mode
 
@@ -19,6 +21,27 @@ export default function Home({ story, preview }) {
       </Head>
 
       <DynamicComponent blok={story.content} />
+
+      <section className="px-4 py-20">
+        <div className="max-w-7xl mx-auto max-w space-y-10">
+          <div>
+            <h2>
+              <span className=" uppercase text-base font-bold text-gray-500 block">
+                Marianna's
+              </span>
+              <span className="block text-6xl font-bold">News & Tips</span>
+            </h2>
+          </div>
+
+          {recentPosts.stories?.map(post => {
+            return (
+              <div key={post.uuid}>
+                <h3>{post.name}</h3>
+              </div>
+            )
+          })}
+        </div>
+      </section>
     </div>
   )
 }
@@ -32,6 +55,11 @@ export async function getStaticProps({ preview = false }) {
     version: "published", // or 'published'
   }
 
+  let recentPostsSbParams = {
+    starts_with: "posts",
+    per_page: "3",
+  }
+
   if (preview) {
     // load the draft version inside of the preview mode
     sbParams.version = "draft"
@@ -39,11 +67,16 @@ export async function getStaticProps({ preview = false }) {
   }
 
   let { data } = await Storyblok.get(`cdn/stories/${slug}`, sbParams)
+  let { data: recentPostsData } = await Storyblok.get(
+    `cdn/stories/`,
+    recentPostsSbParams
+  )
 
   return {
     props: {
       story: data ? data.story : null,
       preview,
+      recentPosts: recentPostsData,
     },
     revalidate: 3600, // revalidate every hour
   }

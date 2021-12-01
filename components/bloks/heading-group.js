@@ -3,16 +3,16 @@
 // *********************************
 // strings: "eyebrow", "title"
 
-import * as React from "react";
-import { SectionThemeContext } from "./section";
+import * as React from "react"
+import { SectionThemeContext } from "./section"
 
 const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
   // console.log("MainHeadingGroup component", mainHeadingGroup)
-  const { eyebrow, title, subtitle } = mainHeadingGroup;
+  const { eyebrow, title, subtitle } = mainHeadingGroup
 
   // dynamic styles based on section theme
-  const sectionTheme = React.useContext(SectionThemeContext);
-  const rootStyles = `${sectionTheme.bgValue == "dark" ? "text-white" : ""}`;
+  const sectionTheme = React.useContext(SectionThemeContext)
+  const rootStyles = `${sectionTheme.bgValue == "dark" ? "text-white" : ""}`
 
   return (
     <div className={rootStyles}>
@@ -26,7 +26,7 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
         <span className="block text-6xl font-bold">{title}</span>
       </h2>
     </div>
-  );
-};
+  )
+}
 
-export default MainHeadingGroup;
+export default MainHeadingGroup

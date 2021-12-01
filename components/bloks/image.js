@@ -4,7 +4,7 @@
 // asset(image): "image"
 
 // import * as React from "react"
-import { Image } from "@storyofams/storyblok-toolkit";
+import { Image } from "@storyofams/storyblok-toolkit"
 
 const BlokImage = ({ blok: blokImage }) => {
   // console.log("image blok", blokImage)
@@ -21,7 +21,7 @@ const BlokImage = ({ blok: blokImage }) => {
       fluid={600}
       focus={blokImage.image?.focus}
     />
-  );
-};
+  )
+}
 
-export default BlokImage;
+export default BlokImage
