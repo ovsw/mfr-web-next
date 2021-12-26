@@ -26,9 +26,7 @@ export default function Home({ story, preview, recentPosts }) {
         <div className="max-w-7xl mx-auto max-w space-y-10">
           <div>
             <h2>
-              <span className=" uppercase text-base font-bold text-gray-500 block">
-                Marianna's
-              </span>
+              <span className="eyebrow block">Marianna's</span>
               <span className="block text-6xl font-bold">News & Tips</span>
             </h2>
           </div>

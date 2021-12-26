@@ -24,7 +24,6 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-
 const Header = ({ props }) => {
   return (
     <header>
@@ -54,7 +53,7 @@ const Header = ({ props }) => {
 
           {/* DESKTOP NAV */}
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <DesktopDropdown title="Fundraisers" items={fundraisers}/>
+            <DesktopDropdown title="Fundraisers" items={fundraisers} />
 
             <Link href="/menu">
               <a className="text-base font-medium text-gray-500 hover:text-gray-900">
@@ -62,9 +61,9 @@ const Header = ({ props }) => {
               </a>
             </Link>
 
-            <DesktopDropdown title="About Us" items={aboutUs}/>
-            <DesktopDropdown title="Selling Tools" items={tools}/>
-            
+            <DesktopDropdown title="About Us" items={aboutUs} />
+            <DesktopDropdown title="Selling Tools" items={tools} />
+
             <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
@@ -72,7 +71,6 @@ const Header = ({ props }) => {
               Contact Us
             </a>
           </Popover.Group>
-          {/* END DESKTOP NAV */}
 
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             {/* <a
@@ -83,12 +81,13 @@ const Header = ({ props }) => {
             </a> */}
             <a
               href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center bg-gradient-to-r from-accent to-red-700 bg-origin-border px-4 py-2 border border-transparent rounded-full shadow-sm text-base font-medium text-white hover:from-purple-700 hover:to-indigo-700"
             >
               Book a Free Tasting
             </a>
           </div>
         </div>
+        {/* END DESKTOP NAV */}
 
         {/* MOBILE MENU  */}
         <Transition
@@ -201,7 +200,6 @@ const Header = ({ props }) => {
 
 export default Header
 
-
 const fundraisers = [
   {
     name: "How it Works",
@@ -212,7 +210,8 @@ const fundraisers = [
   },
   {
     name: "Pricing Info",
-    description: "Our pricing structure and ways to get a quote for your fundraiser.",
+    description:
+      "Our pricing structure and ways to get a quote for your fundraiser.",
     href: "#",
     icon: AnnotationIcon,
   },
@@ -230,13 +229,15 @@ const fundraisers = [
   },
   {
     name: "Get Assistance",
-    description: "Have a question? Need help with your fundraiser? We're one phone call away!",
+    description:
+      "Have a question? Need help with your fundraiser? We're one phone call away!",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Schedule Free a Tasting",
-    description: "Sample all our famous hoagies and delicios pizzas, and get a personal consultation from our experts.",
+    description:
+      "Sample all our famous hoagies and delicios pizzas, and get a personal consultation from our experts.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
@@ -252,7 +253,8 @@ const aboutUs = [
   },
   {
     name: "Hoagie Heroes",
-    description: "We believe in empowering people to make a difference for the causes they believe in. Everyone can be a Hoagie Hero!",
+    description:
+      "We believe in empowering people to make a difference for the causes they believe in. Everyone can be a Hoagie Hero!",
     href: "#",
     icon: AnnotationIcon,
   },
@@ -264,13 +266,15 @@ const aboutUs = [
   },
   {
     name: "Our Story and Promise",
-    description: "Marianna's is now over 40 years old! Find out how it all began, and why we do what we do.",
+    description:
+      "Marianna's is now over 40 years old! Find out how it all began, and why we do what we do.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "News & Events",
-    description: "Marianna's Blog offers guides, useful tips and news about our events, promotions and special offers.",
+    description:
+      "Marianna's Blog offers guides, useful tips and news about our events, promotions and special offers.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
@@ -292,19 +296,22 @@ const tools = [
   },
   {
     name: "Documents and Forms",
-    description: "Everythging you need in terms of paperwork to run a sucessful fundraiser with Marianna's",
+    description:
+      "Everythging you need in terms of paperwork to run a sucessful fundraiser with Marianna's",
     href: "#",
     icon: AnnotationIcon,
   },
   {
     name: "Advertising Templates",
-    description: "Adverting posters, product labels, social media images to help you advertise and run your fundraiser.",
+    description:
+      "Adverting posters, product labels, social media images to help you advertise and run your fundraiser.",
     href: "#",
     icon: ChatAlt2Icon,
   },
   {
     name: "Fundraiser FAQs",
-    description: "Frequent questions and just as many answers - a trove of useful info about running a successful fundraiser.",
+    description:
+      "Frequent questions and just as many answers - a trove of useful info about running a successful fundraiser.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
@@ -316,7 +323,8 @@ const tools = [
   },
   {
     name: "Submit Your Order",
-    description: "Us this to submit your order to us, once your're done selling.",
+    description:
+      "Us this to submit your order to us, once your're done selling.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },

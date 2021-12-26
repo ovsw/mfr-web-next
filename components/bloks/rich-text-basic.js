@@ -14,11 +14,11 @@ const RichTextBasic = ({ blok: richTextBasic }) => {
 
   const rootStyles =
     sectionTheme != undefined
-      ? `${sectionTheme.bgValue == "dark" ? "text-gray-300" : "text-gray-600"}`
+      ? `${sectionTheme.bgValue == "dark" ? "text-gray-300" : "text-dark-body"}`
       : ""
 
   return (
-    <div className={`prose lg:prose-lg leading-snug ${rootStyles}`}>
+    <div className={`prose lg:prose-lg  ${rootStyles}`}>
       <RichTextRenderer data={richTextBasic.text} />
     </div>
   )

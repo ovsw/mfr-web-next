@@ -2,16 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Geomanist";
+    src: url("../public/fonts/geomanist-regular-webfont.eot");
+    src: url("../public/fonts/geomanist-regular-webfont.eot?#iefix")
+        format("embedded-opentype"),
+      url("../public/fonts/geomanist-regular-webfont.woff2") format("woff2"),
+      url("../public/fonts/geomanist-regular-webfont.woff") format("woff"),
+      url("../public/fonts/geomanist-regular-webfont.ttf") format("truetype"),
+      url("../public/fonts/geomanist-regular-webfont.svg#geomanistregular")
+        format("svg");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Geomanist";
+    src: url("../public/fonts/geomanist-regular-italic-webfont.eot");
+    src: url("../public/fonts/geomanist-regular-italic-webfont.eot?#iefix")
+        format("embedded-opentype"),
+      url("../public/fonts/geomanist-regular-italic-webfont.woff2")
+        format("woff2"),
+      url("../public/fonts/geomanist-regular-italic-webfont.woff")
+        format("woff"),
+      url("../public/fonts/geomanist-regular-italic-webfont.ttf")
+        format("truetype"),
+      url("../public/fonts/geomanist-regular-italic-webfont.svg#geomanistitalic")
+        format("svg");
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Geomanist";
+    src: url("../public/fonts/geomanist-bold-webfont.eot");
+    src: url("../public/fonts/geomanist-bold-webfont.eot?#iefix")
+        format("embedded-opentype"),
+      url("../public/fonts/geomanist-bold-webfont.woff2") format("woff2"),
+      url("../public/fonts/geomanist-bold-webfont.woff") format("woff"),
+      url("../public/fonts/geomanist-bold-webfont.ttf") format("truetype"),
+      url("../public/fonts/geomanist-bold-webfont.svg#geomanistregular")
+        format("svg");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Geomanist";
+    src: url("../public/fonts/geomanist-bold-italic-webfont.eot");
+    src: url("../public/fonts/geomanist-bold-italic-webfont.eot?#iefix")
+        format("embedded-opentype"),
+      url("../public/fonts/geomanist-bold-italic-webfont.woff2") format("woff2"),
+      url("../public/fonts/geomanist-bold-italic-webfont.woff") format("woff"),
+      url("../public/fonts/geomanist-bold-italic-webfont.ttf")
+        format("truetype"),
+      url("../public/fonts/geomanist-bold-italic-webfont.svg#geomanistitalic")
+        format("svg");
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  body {
+    @apply text-dark-body;
+  }
+  p {
+    @apply leading-[1.9em]  text-lg;
+  }
+
+  h1,
+  h2 {
+    @apply font-serif;
+  }
+}
+
 @layer components {
   .btn {
-    @apply flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-100 bg-gray-600 hover:bg-gray-500 sm:px-8;
+    @apply flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-gray-100 bg-gray-600 hover:bg-gray-500 sm:px-8;
   }
 
   .btn-primary {
     @apply text-white bg-green-800 hover:bg-green-700;
   }
   .btn-accent {
-    @apply text-white bg-red-800 hover:bg-red-700;
+    @apply text-white bg-accent hover:bg-accent;
   }
   .btn-light-primary {
     @apply bg-white text-green-800 border border-2 border-green-700 hover:bg-green-700 hover:text-white;
@@ -27,5 +101,10 @@
 
   .prose ul li p {
     margin: 0 !important;
+  }
+
+  .eyebrow {
+    @apply text-[70px] font-cursive text-accent block;
+    font-size: 4em;
   }
 }

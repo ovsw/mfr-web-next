@@ -28,7 +28,7 @@ const Hoagie = ({ blok: hoagie }) => {
 
       {/* CONTENT */}
       <div className="content md:w-1/2 space-y-6 md:pl-10">
-        <h3 className="text-4xl">
+        <h3 className="text-4xl text-dark">
           14" <strong>{hoagie.name}</strong> hoagie
         </h3>
         {hoagie.dressing == "italian" ? (
@@ -46,7 +46,7 @@ const Hoagie = ({ blok: hoagie }) => {
         {hoagie.link.cached_url != "" && (
           <div className="inline-grid">
             <Link href={`/${hoagie.link.cached_url}`}>
-              <a className="btn btn-primary">Details</a>
+              <a className="btn btn-accent">Details</a>
             </Link>
           </div>
         )}
