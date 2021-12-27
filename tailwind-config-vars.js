@@ -10,16 +10,6 @@ function withOpacity(variableName) {
   }
 }
 
-function withOpacity(variableName) {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}),${opacityValue})`
-    } else {
-      return `rgb(var(${variableName})`
-    }
-  }
-}
-
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -35,43 +25,44 @@ module.exports = {
     extend: {
       textColor: {
         theme: {
-          base: "#363232",
-          body: "#707070",
-          muted: "#707070",
-          inverted: "#ffffff",
-          primary: "#00764F",
-          accent: "#CC0829",
+          base: withOpacity(`--color-gray-dark`),
+          body: withOpacity(`--color-gray-mid`),
+          muted: withOpacity(`--color-gray-light`),
+          inverted: withOpacity(`--color-white`),
+          primary: withOpacity(`--color-mfr-green`),
+          accent: withOpacity(`--color-mfr-red`),
         },
       },
       backgroundColor: {
         themeButton: {
           primary: {
-            DEFAULT: "#00764F",
-            hover: "#00764F",
+            DEFAULT: withOpacity(`--color-mfr-green`),
+            hover: withOpacity(`--color-mfr-green`),
           },
           accent: {
-            DEFAULT: "#CC0829",
-            hover: "#CC0829",
+            DEFAULT: withOpacity(`--color-mfr-red`),
+            hover: withOpacity(`--color-mfr-red`),
           },
         },
         themeFill: {
-          DEFAULT: "#FBF8EB",
-          primary: "#00764F",
-          accent: "#CC0829",
+          DEFAULT: withOpacity(`--color-mfr-white`),
+          primary: withOpacity(`--color-mfr-green`),
+          accent: withOpacity(`--color-mfr-red`),
         },
       },
       borderColor: {
         theme: {
           primary: {
-            base: "#00764F",
-            hover: "#00764F",
+            base: withOpacity(`--color-mfr-green`),
+            hover: withOpacity(`--color-mfr-green`),
           },
           accent: {
-            DEFAULT: "#CC0829",
-            hover: "#CC0829",
+            DEFAULT: withOpacity(`--color-mfr-red`),
+            hover: withOpacity(`--color-mfr-red`),
           },
         },
       },
+      colors: {},
     },
   },
   variants: {

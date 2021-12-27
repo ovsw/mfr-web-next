@@ -63,16 +63,27 @@
     font-style: italic;
   }
 
+  :root {
+    --color-mfr-red: 204, 8, 41;
+    --color-mfr-green: 0, 118, 79;
+    --color-mfr-white: 251, 248, 235;
+    --color-gray-dark: 54, 50, 50;
+    --color-gray-mid: 112, 112, 112;
+    --color-gray-light: 144, 144, 144;
+    --color-white: 255, 255, 255;
+  }
+
   body {
-    @apply text-dark-body;
+    @apply text-theme-body;
   }
   p {
     @apply leading-[1.9em]  text-lg;
   }
 
   h1,
-  h2 {
-    @apply font-serif;
+  h2,
+  h3 {
+    @apply font-serif text-theme-base;
   }
 }
 
@@ -82,20 +93,20 @@
   }
 
   .btn-primary {
-    @apply text-white bg-green-800 hover:bg-green-700;
+    @apply text-white bg-themeButton-primary hover:bg-themeButton-primary-hover;
   }
   .btn-accent {
-    @apply text-white bg-accent hover:bg-accent;
+    @apply text-white bg-themeButton-accent hover:bg-themeButton-accent-hover;
   }
-  .btn-light-primary {
-    @apply bg-white text-green-800 border border-2 border-green-700 hover:bg-green-700 hover:text-white;
+  .btn-inverted-primary {
+    @apply bg-white text-theme-primary border-2 border-tes hover:bg-green-700 hover:text-white;
   }
   .btn-light-accent {
-    @apply bg-white text-red-800 border border-2 border-red-700 hover:bg-red-700 hover:text-white;
+    @apply bg-white text-red-800 border-2 border-red-700 hover:bg-red-700 hover:text-white;
   }
 
   .btn-dark {
-    @apply bg-gray-800 text-white border border-2 border-white hover:bg-white hover:text-gray-800 hover:border-gray-800;
+    @apply bg-gray-800 text-white border-2 border-white hover:bg-white hover:text-gray-800 hover:border-gray-800;
   }
   /* bg-opacity-60 hover:bg-opacity-70*/
 
@@ -104,7 +115,7 @@
   }
 
   .eyebrow {
-    @apply text-[70px] font-cursive text-accent block;
+    @apply text-[70px] font-cursive text-theme-accent block;
     font-size: 4em;
   }
 }

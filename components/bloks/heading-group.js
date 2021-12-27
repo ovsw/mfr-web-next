@@ -19,7 +19,7 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
       <h2>
         {eyebrow && <span className="eyebrow block leading-8">{eyebrow}</span>}
         {""}
-        <span className="block text-[61px] font-bold text-primary">
+        <span className="block text-[61px] font-bold text-theme-primary">
           {title}
         </span>
       </h2>
