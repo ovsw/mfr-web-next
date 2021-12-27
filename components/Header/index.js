@@ -17,8 +17,11 @@ import {
   XIcon,
 } from "@heroicons/react/outline"
 import Link from "next/link"
+import Image from "next/image"
 
 import DesktopDropdown from "./nav/deskop-dropdown"
+
+import DesktopLogo from "../../public/images/mariannas-fundraiser-logo-2021-transparent.png"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -28,17 +31,20 @@ const Header = ({ props }) => {
   return (
     <header>
       <Popover className="relative bg-white">
-        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+        <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 md:py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           {/* LOGO */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">Workflow</span>
-              <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                alt=""
-              />
-            </a>
+            <Link href="/">
+              <a className="w-40 pt-2 md:pt-0 md:h-10 relative">
+                <span className="sr-only">Workflow</span>
+                <Image
+                  className=""
+                  src={DesktopLogo}
+                  alt="Marianna's Fundraisers Logo"
+                  fit="fit"
+                />
+              </a>
+            </Link>
           </div>
           {/* LOGO END */}
 
@@ -108,13 +114,14 @@ const Header = ({ props }) => {
               <div className="pt-5 pb-6 px-5">
                 {/* MOBILE MENU TOP */}
                 <div className="flex items-center justify-between">
-                  <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
-                      alt="Workflow"
-                    />
-                  </div>
+                  <Link href="/">
+                    <a className="w-24">
+                      <Image
+                        src={DesktopLogo}
+                        alt="Marianna's Fundraisers Logo"
+                      />
+                    </a>
+                  </Link>
 
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
