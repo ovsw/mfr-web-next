@@ -72,6 +72,14 @@ module.exports = {
           },
         },
       },
+      fill: {
+        theme: {
+          primary: "#00764F",
+          accent: "#CC0829",
+          white: "#FFFFFF",
+          offWhite: "#FBF8EB",
+        },
+      },
     },
   },
   variants: {

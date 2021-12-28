@@ -1,10 +1,22 @@
 import { Image } from "@storyofams/storyblok-toolkit"
+import SectionBrush1 from "../svg/section-brush-1"
 
-const HeroTemplate = ({ background_image, children }) => {
+const HeroTemplate = ({ background_image, children, border_color }) => {
   // console.log("background_image", background_image)
+
+  const brushBorderThemes = {
+    white: "fill-theme-white",
+    green: "fill-theme-primary",
+    red: "fill-theme-accent",
+    yellow: "fill-theme-offWhite",
+  }
+  const dynamicBrushStyles =
+    border_color !== undefined
+      ? brushBorderThemes[border_color]
+      : "fill-theme-white"
+
   return (
-    <div>
-      {/* Hero card */}
+    <div className="Hero pb-20">
       <div className="relative bg-gray-300">
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-green-600" />
         {/* IMAGE */}
@@ -31,6 +43,9 @@ const HeroTemplate = ({ background_image, children }) => {
             </div>
           </div>
         </div>
+        <SectionBrush1
+          className={`absolute -bottom-20 z-30 ${dynamicBrushStyles}`}
+        />
       </div>
     </div>
   )

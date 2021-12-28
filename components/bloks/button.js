@@ -23,8 +23,8 @@ const Button = ({ blok: button }) => {
   const styleVariants = {
     primary: "btn-primary",
     accent: "btn-accent",
-    "light-primary": "btn-light-primary",
-    "light-accent": "btn-light-accent",
+    "light-primary": "btn-inverted-primary",
+    "light-accent": "btn-inverted-accent",
     dark: "btn-dark",
   }
 

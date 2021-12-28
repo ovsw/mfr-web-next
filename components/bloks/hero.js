@@ -12,7 +12,7 @@ import { blockIterator } from "../../utils/blockIterator"
 const Hero = ({ blok: hero }) => {
   // console.log("hero component", hero)
 
-  const { background_image, buttons, is_tall, text, title } = hero
+  const { background_image, buttons, is_tall, text, title, border_color } = hero
 
   return (
     <>
@@ -21,6 +21,7 @@ const Hero = ({ blok: hero }) => {
         background_image={background_image}
         text={text}
         buttons={buttons}
+        border_color={border_color}
       >
         <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
           <span className="block text-white">{title}</span>
@@ -33,7 +34,7 @@ const Hero = ({ blok: hero }) => {
         {/* BUTTONS */}
         {buttons.length > 0 && (
           <div className="mt-10 max-w-sm sm:max-w-none sm:flex">
-            <div className="space-y-4 sm:space-y-0  sm:inline-grid sm:grid-cols-2 sm:gap-5">
+            <div className="space-y-4 sm:space-y-0 sm:inline-grid sm:grid-cols-2 sm:gap-5">
               {blockIterator(buttons)}
             </div>
           </div>

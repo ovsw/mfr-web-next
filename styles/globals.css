@@ -89,7 +89,13 @@
 
 @layer components {
   .btn {
-    @apply flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-gray-100 bg-gray-600 hover:bg-gray-500 sm:px-8;
+    @apply flex items-center justify-center 
+    px-4 py-3 sm:px-[40px] sm:py-[20px]
+    border border-transparent 
+    text-[18px] font-bold font-serif 
+    rounded-2xl shadow-sm  
+    text-gray-100
+    bg-gray-600 hover:bg-gray-500;
   }
 
   .btn-primary {
@@ -99,10 +105,12 @@
     @apply text-white bg-themeButton-accent hover:bg-themeButton-accent-hover;
   }
   .btn-inverted-primary {
-    @apply bg-white text-theme-primary border-2 border-tes hover:bg-green-700 hover:text-white;
+    @apply bg-white text-theme-primary 
+    hover:bg-green-700 hover:text-white;
   }
-  .btn-light-accent {
-    @apply bg-white text-red-800 border-2 border-red-700 hover:bg-red-700 hover:text-white;
+  .btn-inverted-accent {
+    @apply bg-white text-theme-accent 
+    hover:bg-red-700 hover:text-white;
   }
 
   .btn-dark {
