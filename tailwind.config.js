@@ -40,7 +40,7 @@ module.exports = {
           muted: "#707070",
           inverted: "#ffffff",
           primary: "#00764F",
-          accent: "#CC0829",
+          accent: "rgba(224, 0, 51, 1)",
         },
       },
       backgroundColor: {
@@ -50,14 +50,14 @@ module.exports = {
             hover: "#00764F",
           },
           accent: {
-            DEFAULT: "#CC0829",
-            hover: "#CC0829",
+            DEFAULT: "rgba(224, 0, 51, 1)",
+            hover: "rgba(224, 0, 51, 1)",
           },
         },
         themeFill: {
           DEFAULT: "#FBF8EB",
           primary: "#00764F",
-          accent: "#CC0829",
+          accent: "rgba(224, 0, 51, 1)",
         },
       },
       borderColor: {
@@ -67,15 +67,15 @@ module.exports = {
             hover: "#00764F",
           },
           accent: {
-            DEFAULT: "#CC0829",
-            hover: "#CC0829",
+            DEFAULT: "rgba(224, 0, 51, 1)",
+            hover: "rgba(224, 0, 51, 1)",
           },
         },
       },
       fill: {
         theme: {
           primary: "#00764F",
-          accent: "#CC0829",
+          accent: "rgba(224, 0, 51, 1)",
           white: "#FFFFFF",
           offWhite: "#FBF8EB",
         },
