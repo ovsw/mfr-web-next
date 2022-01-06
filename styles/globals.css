@@ -91,9 +91,10 @@
   .btn {
     @apply flex items-center justify-center 
     px-4 py-3 sm:px-[40px] sm:py-[20px]
+    leading-tight
     border border-transparent 
     text-[18px] font-bold font-serif 
-    rounded-2xl shadow-sm  
+    rounded-[7px] md:rounded-[14px] shadow-sm  
     text-gray-100
     bg-gray-600 hover:bg-gray-500;
   }
