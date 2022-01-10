@@ -55,9 +55,10 @@ module.exports = {
           },
         },
         themeFill: {
-          DEFAULT: "#FBF8EB",
+          DEFAULT: "#FFFFFF",
           primary: "#00764F",
           accent: "rgba(224, 0, 51, 1)",
+          offWhite: "#FBF8EB",
         },
       },
       borderColor: {
