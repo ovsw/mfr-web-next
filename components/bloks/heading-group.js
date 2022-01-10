@@ -17,9 +17,17 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
   return (
     <div className={rootStyles}>
       <h2>
-        {eyebrow && <span className="eyebrow block leading-8">{eyebrow}</span>}
+        {eyebrow && (
+          <span className="eyebrow block leading-none">{eyebrow}</span>
+        )}
         {""}
-        <span className="block text-[61px] font-bold text-theme-primary">
+        <span
+          className="block
+          pt-4 md:pt-0 mb-20
+          text-[46px] leading-none
+          md:text-[61px] 
+          font-bold text-theme-primary"
+        >
           {title}
         </span>
       </h2>

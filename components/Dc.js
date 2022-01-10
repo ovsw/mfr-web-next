@@ -25,6 +25,8 @@ import RowBigImage from "./bloks/row-big-image"
 import RowTestimonials from "./bloks/row-testimonials"
 import RowMenuListing from "./bloks/row-menu-listing"
 import Hoagie from "./bloks/hoagie"
+import RowThreeSteps from "./bloks/row-three-steps"
+import Step from "./bloks/step"
 
 const BlokComponents = {
   page: Page,
@@ -49,6 +51,8 @@ const BlokComponents = {
   "row-testimonials": RowTestimonials,
   "row-menu-listing": RowMenuListing,
   hoagie: Hoagie,
+  "row-steps": RowThreeSteps,
+  step: Step,
 }
 
 const Dc = ({ blok }) => {
