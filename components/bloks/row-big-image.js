@@ -5,28 +5,28 @@
 // asset: "image"
 // bool: "is_reversed"
 
-import * as React from "react";
-import { blockIterator } from "../../utils/blockIterator";
-import { Image } from "@storyofams/storyblok-toolkit";
+import * as React from "react"
+import { blockIterator } from "../../utils/blockIterator"
+import { Image } from "@storyofams/storyblok-toolkit"
 
-import { SectionThemeContext } from "./section";
+import { SectionThemeContext } from "./section"
 
 const Row = ({ blok: rowBigImage }) => {
   // console.log("two column row component", rowBigImage)
 
-  const sectionTheme = React.useContext(SectionThemeContext);
-  const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : "";
+  const sectionTheme = React.useContext(SectionThemeContext)
+  const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : ""
 
-  const { content, image, is_reversed } = rowBigImage;
+  const { content, image, is_reversed } = rowBigImage
 
   const alternateContentWrapperStyles = is_reversed
     ? "lg:ml-auto lg:mr-0"
-    : "lg:mr-auto lg:ml-0";
+    : "lg:mr-auto lg:ml-0"
   const alternateContentColumnStyles = is_reversed
     ? "lg:col-start-2 lg:pl-8"
-    : "lg:pr-8";
+    : "lg:pr-8"
 
-  const alternateImageStyles = is_reversed ? "lg:left-0" : "lg:right-0";
+  const alternateImageStyles = is_reversed ? "lg:left-0" : "lg:right-0"
 
   return (
     <div className="relative bg-white">
@@ -62,7 +62,7 @@ const Row = ({ blok: rowBigImage }) => {
       </div>
       {/* END IMAGE */}
     </div>
-  );
-};
+  )
+}
 
-export default Row;
+export default Row

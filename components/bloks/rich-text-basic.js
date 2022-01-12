@@ -18,7 +18,7 @@ const RichTextBasic = ({ blok: richTextBasic }) => {
       : ""
 
   return (
-    <div className={`prose lg:prose-lg  ${rootStyles}`}>
+    <div className={`prose prose-stone prose-2xl opacity-70  ${rootStyles}`}>
       <RichTextRenderer data={richTextBasic.text} />
     </div>
   )

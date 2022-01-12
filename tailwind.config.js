@@ -20,12 +20,19 @@ function withOpacity(variableName) {
   }
 }
 
+const round = num =>
+  num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, "$1")
+    .replace(/\.0$/, "")
+const rem = px => `${round(px / 16)}rem`
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     fontFamily: {
       sans: ["Geomanist", "sans-serif"],
@@ -58,7 +65,7 @@ module.exports = {
           DEFAULT: "#FFFFFF",
           primary: "#00764F",
           accent: "rgba(224, 0, 51, 1)",
-          offWhite: "#FBF8EB",
+          offWhite: "#FAF7EA",
         },
       },
       borderColor: {
@@ -78,13 +85,21 @@ module.exports = {
           primary: "#00764F",
           accent: "rgba(224, 0, 51, 1)",
           white: "#FFFFFF",
-          offWhite: "#FBF8EB",
+          offWhite: "#FAF7EA",
         },
       },
+      typography: theme => ({
+        "3xl": {
+          css: {
+            fontSize: rem(28),
+            lineHeight: round(40 / 28),
+          },
+        },
+      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 }

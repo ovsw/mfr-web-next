@@ -34,7 +34,7 @@
     font-style: italic;
   }
 
-  @font-face {
+  /* @font-face {
     font-family: "Geomanist";
     src: url("../public/fonts/geomanist-bold-webfont.eot");
     src: url("../public/fonts/geomanist-bold-webfont.eot?#iefix")
@@ -61,6 +61,36 @@
         format("svg");
     font-weight: 700;
     font-style: italic;
+  } */
+
+  @font-face {
+    font-family: "geomanistregular";
+    src: url("../public/fonts/geomanist-medium-webfont.eot");
+    src: url("../public/fonts/geomanist-medium-webfont.eot?#iefix")
+        format("embedded-opentype"),
+      url("../public/fonts/geomanist-medium-webfont.woff2") format("woff2"),
+      url("../public/fonts/geomanist-medium-webfont.woff") format("woff"),
+      url("../public/fonts/geomanist-medium-webfont.ttf") format("truetype"),
+      url("../public/fonts/geomanist-medium-webfont.svg#geomanistregular")
+        format("svg");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "geomanistitalic";
+    src: url("../public/fonts/geomanist-medium-italic-webfont.eot");
+    src: url("../public/fonts/geomanist-medium-italic-webfont.eot?#iefix")
+        format("embedded-opentype"),
+      url("../public/fonts/geomanist-medium-italic-webfont.woff2")
+        format("woff2"),
+      url("../public/fonts/geomanist-medium-italic-webfont.woff") format("woff"),
+      url("../public/fonts/geomanist-medium-italic-webfont.ttf")
+        format("truetype"),
+      url("../public/fonts/geomanist-medium-italic-webfont.svg#geomanistitalic")
+        format("svg");
+    font-weight: 700;
+    font-style: italic;
   }
 
   :root {
@@ -76,9 +106,9 @@
   body {
     @apply text-theme-body;
   }
-  p {
+  /* p {
     @apply leading-[1.9em]  text-lg;
-  }
+  } */
 
   h1,
   h2,
@@ -119,10 +149,6 @@
   }
   /* bg-opacity-60 hover:bg-opacity-70*/
 
-  .prose ul li p {
-    margin: 0 !important;
-  }
-
   .eyebrow {
     @apply text-[46px] md:text-[70px] font-cursive text-theme-accent block;
   }
@@ -145,4 +171,12 @@
 }
 
 @layer utilities {
+  .full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }

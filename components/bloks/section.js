@@ -70,7 +70,9 @@ const Section = ({ blok: section }) => {
         ${topMarginStyles[margin_top]} 
         ${bottomMarginStyles[margin_bottom]} 
         ${topDecorationStyles[decoration_top]}
-        relative`}
+        relative
+        
+        `}
       >
         {decoration_top == "brushed" && (
           <SectionBrushMenu className=" z-30 fill-theme-offWhite" />
