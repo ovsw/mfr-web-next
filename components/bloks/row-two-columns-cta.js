@@ -3,18 +3,18 @@
 // *********************************
 // bloks: "main_content" and "buttons"
 
-import * as React from "react";
-import { blockIterator } from "../../utils/blockIterator";
+import * as React from "react"
+import { blockIterator } from "../../utils/blockIterator"
 
-import { SectionThemeContext } from "./section";
+import { SectionThemeContext } from "./section"
 
 const Row = ({ blok: rowCta }) => {
   // console.log("two column rowCta component", rowCta)
 
-  const { is_reversed, content_main, content_buttons } = rowCta;
+  const { is_reversed, content_main, content_buttons } = rowCta
 
-  const sectionTheme = React.useContext(SectionThemeContext);
-  const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : "";
+  const sectionTheme = React.useContext(SectionThemeContext)
+  const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : ""
 
   return (
     <div className={textStyles}>
@@ -26,7 +26,7 @@ const Row = ({ blok: rowCta }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Row;
+export default Row

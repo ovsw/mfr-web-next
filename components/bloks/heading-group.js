@@ -12,7 +12,9 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
 
   // dynamic styles based on section theme
   const sectionTheme = React.useContext(SectionThemeContext)
-  const rootStyles = `${sectionTheme.bgValue == "dark" ? "text-white" : ""}`
+  const rootStyles = `${
+    sectionTheme.bgValue == "dark" ? "text-white" : "text-theme-primary"
+  }`
 
   return (
     <div className={rootStyles}>
@@ -22,11 +24,14 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
         )}
         {""}
         <span
-          className="block
+          className={`
+          block
           pt-4 md:pt-0 mb-20
           text-[46px] leading-none
           md:text-[61px] 
-          font-bold text-theme-primary"
+          font-bold
+          ${rootStyles}
+          `}
         >
           {title}
         </span>

@@ -63,6 +63,7 @@ module.exports = {
         },
         themeFill: {
           DEFAULT: "#FFFFFF",
+          white: "#FFFFFF",
           primary: "#00764F",
           accent: "rgba(224, 0, 51, 1)",
           offWhite: "#FAF7EA",

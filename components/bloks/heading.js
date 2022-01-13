@@ -4,9 +4,10 @@
 // text: "title"
 // text: "level" -  what level should the heading be?
 
-// import * as React from "react"
+import * as React from "react"
+import { SectionThemeContext } from "./section"
 
-const headingStyles = {
+const headingLevelStyles = {
   h1: "text-5xl",
   h2: "text-3xl",
   h3: "text-2xl",
@@ -16,11 +17,17 @@ const headingStyles = {
 const Heading = ({ blok: heading }) => {
   const HeadingLevel = heading.level || "h2"
   const HeadingStyle = heading.style || "h2"
-  // console.log("heading component", heading.title, headingStyles[HeadingLevel]);
+  // console.log("heading component", heading.title, headingLevelStyles[HeadingLevel]);
+
+  // dynamic styles based on section theme
+  const sectionTheme = React.useContext(SectionThemeContext)
+  const rootStyles = `${
+    sectionTheme.bgValue == "dark" ? "text-white" : "text-theme-primary"
+  }`
 
   return (
     <HeadingLevel
-      className={`${headingStyles[HeadingStyle]} font-bold text-theme-primary`}
+      className={`${headingLevelStyles[HeadingStyle]} ${rootStyles} font-bold`}
     >
       {heading.title}
     </HeadingLevel>
