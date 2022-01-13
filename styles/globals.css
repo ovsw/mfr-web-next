@@ -119,7 +119,7 @@
 
 @layer components {
   .btn {
-    @apply flex items-center justify-center 
+    @apply inline-flex items-center justify-center 
     px-4 py-3 sm:px-[40px] sm:py-[20px]
     leading-tight
     border border-transparent 

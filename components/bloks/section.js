@@ -124,7 +124,7 @@ const Section = ({ blok: section }) => {
           React.createElement(brushedSVGsTop[decoration_top], {
             className: `z-30 ${decorationFillColor[background]}`,
           })}
-        <div className={`${contentWidthStyles[width]}`}>
+        <div className={`${contentWidthStyles[width]} relative`}>
           {blockIterator(content)}
         </div>
         {brushedSVGsBottom[decoration_bottom] !== undefined &&
