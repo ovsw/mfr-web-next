@@ -9,6 +9,9 @@ import { Image } from "@storyofams/storyblok-toolkit"
 
 import { SectionThemeContext } from "./section"
 
+// svgs
+import DottedPathSteps from "../svg/dotted-path-steps"
+
 const RowThreeSteps = ({ blok: row }) => {
   // console.log("two column row component", row)
 
@@ -18,7 +21,7 @@ const RowThreeSteps = ({ blok: row }) => {
   return (
     <div className={textStyles}>
       {/* <h2>This is a thre column row</h2> */}
-      <div className="flex flex-col md:flex-row space-y-14 md:space-y-0">
+      <div className="flex flex-col md:flex-row space-y-14 md:space-y-0 mb-28 relative z-30">
         {row.steps.map((step, i) => {
           return (
             <div className="w-full md:w-1/3" key={i}>
@@ -40,13 +43,16 @@ const RowThreeSteps = ({ blok: row }) => {
                   {step.title}
                 </span>
               </h3>
-              <div className="pl-24 md:pl-28 pt-4 custom-list-bullets">
-                <RichTextRenderer data={step.description} />
+              <div className="pl-24 md:pl-28 pt-4 custom-list-bullets text-xl">
+                <RichTextRenderer data={step.description} className="" />
               </div>
             </div>
           )
         })}
       </div>
+
+      {/* dotted path */}
+      <DottedPathSteps className="w-full absolute top-64" />
     </div>
   )
 }
