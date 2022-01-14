@@ -16,11 +16,22 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
     sectionTheme.bgValue == "dark" ? "text-white" : "text-theme-primary"
   }`
 
+  const eyebrowColorsFromBgValue = {
+    light: "text-theme-accent",
+    dark: "text-theme-offWhite",
+  }
+
   return (
     <div className={rootStyles}>
       <h2>
         {eyebrow && (
-          <span className="eyebrow block leading-none">{eyebrow}</span>
+          <span
+            className={`eyebrow block leading-none ${
+              eyebrowColorsFromBgValue[sectionTheme.bgValue]
+            }`}
+          >
+            {eyebrow}
+          </span>
         )}
         {""}
         <span

@@ -1,57 +1,104 @@
 // a two column row with a big image on one side
 
 // *********************************
-// bloks: "content"
+// bloks: content, heading
 // asset: "image"
-// bool: "is_reversed"
 
 // import * as React from "react"
 import { blockIterator } from "../../utils/blockIterator"
+import { Image } from "@storyofams/storyblok-toolkit"
 
-export default function Home({ blok: rowTestimonials }) {
-  const { testimonials_list } = rowTestimonials
+// svgs
+import ChevronLeftRound from "../svg/chevron-left-round"
+import ChevronRightRound from "../svg/chevron-right-round"
+
+export default function TestimonialsRow({ blok: rowTestimonials }) {
+  const { heading, testimonials_list, image } = rowTestimonials
 
   // console.log("testimonials_list", testimonials_list);
   return (
-    <div className="container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pt-10 gap-6">
-      {testimonials_list.map(testimonial => (
-        <div className="bg-white" key={testimonial._uid}>
-          <div className="w-full relative flex flex-col items-center md:p-12 p-6">
-            <div className="text-gray-600  flex flex-col ">
+    <div className="container mx-auto py-20">
+      <div className="flex">
+        <div className="max-w-lg">{blockIterator(heading)}</div>
+        <div className="flex gap-4 items-center ml-10 pb-1">
+          <ChevronLeftRound />
+          <ChevronRightRound />
+        </div>
+      </div>
+
+      <div className="grid lg:grid-cols-2 ">
+        <div className="" key={testimonials_list[1]._uid}>
+          <div className="w-full relative flex flex-col   p-6 ">
+            <div className="flex flex-col text-white">
               <QuoteSvg />
-              <p className="xl:w-80 text-xl mt-4 italic">{testimonial.text}</p>
+              <p className="xl:max-w-xl text-xl mt-4 italic text-white">
+                {testimonials_list[0].text}
+              </p>
             </div>
-            {/* <div className="text-white absolute bottom-0 -mb-6">
-              <DownArrowSvg />
-            </div> */}
           </div>
-          <div className="flex flex-col    px-12 py-10 pt-0">
-            {/* <img
-              src="https://i.ibb.co/ZgF5Zzz/avatar-1.png"
-              alt="profile pictre"
-              className="w-12 h-12"
-            /> */}
-            <p className="text-base font-semibold leading-4 my-2 text-gray-800">
-              {testimonial.author_name}
+          <div className="flex flex-col  px-12 py-10 pt-0 text-gray-300 tracking-wider">
+            <p className="text-base font-semibold leading-4 my-2">
+              {testimonials_list[1].author_name}
             </p>
-            <p className="text-base leading-4  text-gray-600">
-              {testimonial.author_info}
+            <p className="text-base leading-4 ">
+              {testimonials_list[1].author_info}
             </p>
           </div>
         </div>
-      ))}
+
+        {/* IMAGE */}
+        <div
+          className="
+        absolute -top-24 -bottom-20 right-0 z-40
+          md:pt-0 
+         aspect-[668/872]
+        "
+        >
+          <Image
+            className=""
+            src={image?.filename}
+            height="100%"
+            width="100%"
+            fluid={[668, 872]}
+            focus={image?.focus}
+          />
+        </div>
+        {/* END IMAGE */}
+      </div>
+
+      {/* <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
+        {testimonials_list.map(testimonial => (
+          <div className="bg-white" key={testimonial._uid}>
+            <div className="w-full relative flex flex-col items-center md:p-12 p-6">
+              <div className="text-gray-600  flex flex-col ">
+                <QuoteSvg />
+                <p className="xl:w-80 text-xl mt-4 italic">
+                  {testimonial.text}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col    px-12 py-10 pt-0">
+               <img
+              src="https://i.ibb.co/ZgF5Zzz/avatar-1.png"
+              alt="profile pictre"
+              className="w-12 h-12"
+            /> 
+              <p className="text-base font-semibold leading-4 my-2 text-gray-800">
+                {testimonial.author_name}
+              </p>
+              <p className="text-base leading-4  text-gray-600">
+                {testimonial.author_info}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>  */}
     </div>
   )
 }
 
 const QuoteSvg = () => (
-  <svg
-    width={26}
-    height={27}
-    viewBox="0 0 26 27"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width={26} height={27} viewBox="0 0 26 27" fill="none">
     <g clipPath="url(#clip0)">
       <path
         d="M25.2578 14.3309H19.2969C19.3988 9.55819 20.6309 9.01642 22.1785 8.86178L22.7753 8.78051V3.53242L22.0874 3.57292C20.0666 3.69783 17.8323 4.09805 16.3417 6.11965C15.035 7.89183 14.459 10.7871 14.459 15.2316V23.4673H25.2578V14.3309Z"
@@ -71,77 +118,6 @@ const QuoteSvg = () => (
           transform="translate(25.2578 27) rotate(-180)"
         />
       </clipPath>
-    </defs>
-  </svg>
-)
-
-const DownArrowSvg = () => (
-  <svg
-    width={34}
-    height={28}
-    viewBox="0 0 34 28"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g filter="url(#filter0_dd)">
-      <path d="M17 19L28.2583 3.25H5.74167L17 19Z" fill="currentColor" />
-    </g>
-    <defs>
-      <filter
-        id="filter0_dd"
-        x="0.741699"
-        y="0.25"
-        width="32.5167"
-        height="27.75"
-        filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
-      >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feColorMatrix
-          in="SourceAlpha"
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        />
-        <feMorphology
-          radius={1}
-          operator="erode"
-          in="SourceAlpha"
-          result="effect1_dropShadow"
-        />
-        <feOffset dy={4} />
-        <feGaussianBlur stdDeviation={3} />
-        <feColorMatrix
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-        />
-        <feBlend
-          mode="normal"
-          in2="BackgroundImageFix"
-          result="effect1_dropShadow"
-        />
-        <feColorMatrix
-          in="SourceAlpha"
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        />
-        <feOffset dy={2} />
-        <feGaussianBlur stdDeviation="2.5" />
-        <feColorMatrix
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
-        />
-        <feBlend
-          mode="normal"
-          in2="effect1_dropShadow"
-          result="effect2_dropShadow"
-        />
-        <feBlend
-          mode="normal"
-          in="SourceGraphic"
-          in2="effect2_dropShadow"
-          result="shape"
-        />
-      </filter>
     </defs>
   </svg>
 )

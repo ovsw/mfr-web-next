@@ -36,6 +36,7 @@ const Section = ({ blok: section }) => {
     shaded: "bg-themeFill-offWhite",
     primary: "bg-themeFill-primary",
     accent: "bg-themeFill-accent",
+    muslin: "bg-muslin",
   }
 
   const contentWidthStyles = {
@@ -79,12 +80,18 @@ const Section = ({ blok: section }) => {
     default: "pb-20",
     none: "",
     large: "pb-36",
+    larger: "pb-56",
   }
 
   // to be passed down through context so that child components can know how to adapt their styles
   const themeContextValues = {
+    bg: background,
     bgValue:
-      background == "primary" || background == "accent" ? "dark" : "light",
+      background == "primary" ||
+      background == "accent" ||
+      background == "muslin"
+        ? "dark"
+        : "light",
   }
 
   // const dynamicBrushStyles =
@@ -103,6 +110,7 @@ const Section = ({ blok: section }) => {
     primary: "fill-theme-primary",
     accent: "fill-theme-accent",
     light: "fill-theme-white",
+    muslin: "fill-theme-muslin",
   }
 
   return (

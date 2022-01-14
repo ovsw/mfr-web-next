@@ -179,4 +179,7 @@
     margin-left: -50vw;
     margin-right: -50vw;
   }
+  .bg-muslin {
+    background: url("/images/bg/dark-muslin-bg.jpg") center center;
+  }
 }

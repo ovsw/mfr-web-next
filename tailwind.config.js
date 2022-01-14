@@ -42,6 +42,7 @@ module.exports = {
     extend: {
       textColor: {
         theme: {
+          offWhite: "#FAF7EA",
           base: "#363232",
           body: "#707070",
           muted: "#707070",
@@ -87,6 +88,7 @@ module.exports = {
           accent: "rgba(224, 0, 51, 1)",
           white: "#FFFFFF",
           offWhite: "#FAF7EA",
+          muslin: "transparent",
         },
       },
       typography: theme => ({
