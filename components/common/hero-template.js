@@ -27,18 +27,18 @@ const HeroTemplate = ({ background_image, children, border_color }) => {
               alt={background_image?.alt}
               height="100%"
               width="100%"
-              fluid={1200}
+              fluid={1920}
               focus={background_image?.focus}
               className=""
             />
-            <div className="absolute inset-0 bg-gray-700 mix-blend-multiply" />
+            <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-500 via-gray-100 to-transparent" />
           </div>
         )}
         {/* END IMAGE */}
 
         <div className="max-w-7xl mx-auto ">
           <div className="relative sm:overflow-hidden">
-            <div className="relative px-4 py-16 sm:px-6 sm:py-24  lg:py-60 lg:px-8 text-white">
+            <div className="relative px-4 py-16 sm:px-6 sm:py-24  lg:py-80 lg:px-8 text-white">
               {children}
             </div>
           </div>
