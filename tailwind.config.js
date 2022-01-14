@@ -68,6 +68,7 @@ module.exports = {
           primary: "#00764F",
           accent: "rgba(224, 0, 51, 1)",
           offWhite: "#FAF7EA",
+          tertiary: "#FEF7C1",
         },
       },
       borderColor: {
