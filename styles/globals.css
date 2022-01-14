@@ -143,6 +143,15 @@
     @apply bg-white text-theme-accent 
     hover:bg-red-700 hover:text-white;
   }
+  .btn-outlined-accent {
+    @apply bg-white text-theme-accent 
+    hover:bg-red-700 hover:text-white;
+  }
+
+  .btn-small {
+    @apply px-4 py-3 sm:px-[20px] sm:py-[12px] text-[16px]
+    ring-2 ring-accent;
+  }
 
   .btn-dark {
     @apply bg-gray-800 text-white border-2 border-white hover:bg-white hover:text-gray-800 hover:border-gray-800;

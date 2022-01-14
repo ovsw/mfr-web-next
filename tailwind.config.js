@@ -40,6 +40,11 @@ module.exports = {
       cursive: ["fave-script-pro", "cursive"],
     },
     extend: {
+      colors: {
+        primary: "#00764F",
+        accent: "rgba(224, 0, 51, 1)",
+        tertiary: "#FEF7C1",
+      },
       textColor: {
         theme: {
           offWhite: "#FAF7EA",
