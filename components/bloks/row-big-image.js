@@ -17,7 +17,7 @@ const Row = ({ blok: rowBigImage }) => {
   const sectionTheme = React.useContext(SectionThemeContext)
   const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : ""
 
-  const { content, image, is_reversed } = rowBigImage
+  const { content, image, is_reversed, extra_padding } = rowBigImage
 
   const alternateContentWrapperStyles = is_reversed
     ? "lg:ml-auto lg:mr-0"
@@ -28,10 +28,16 @@ const Row = ({ blok: rowBigImage }) => {
 
   const alternateImageStyles = is_reversed ? "lg:left-0" : "lg:right-0"
 
+  const paddingStyles = extra_padding ? "pt-12 pb-16 px-4 sm:pt-16 sm:px-6" : ""
+
   return (
     <div className="relative">
       {/* CONTENT */}
-      <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+      <div
+        className={`relative 
+      ${paddingStyles}
+      lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2`}
+      >
         <div className={`${alternateContentColumnStyles}`}>
           <div
             className={`text-base max-w-prose mx-auto lg:max-w-lg ${alternateContentWrapperStyles} space-y-16`}
