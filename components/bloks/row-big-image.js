@@ -29,7 +29,7 @@ const Row = ({ blok: rowBigImage }) => {
   const alternateImageStyles = is_reversed ? "lg:left-0" : "lg:right-0"
 
   return (
-    <div className="relative bg-white">
+    <div className="relative">
       {/* CONTENT */}
       <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
         <div className={`${alternateContentColumnStyles}`}>
@@ -44,7 +44,7 @@ const Row = ({ blok: rowBigImage }) => {
 
       {/* IMAGE */}
       <div
-        className={`lg:absolute lg:left-0 lg:top-0 h-full ${alternateImageStyles} lg:w-1/2`}
+        className={`lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2`}
       >
         <div className="h-56 w-full object-cover lg:absolute lg:h-full">
           <Image
