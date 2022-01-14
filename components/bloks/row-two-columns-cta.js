@@ -30,7 +30,7 @@ const Row = ({ blok: rowCta }) => {
       {/* image */}
       <div
         className="
-        absolute -top-[160px] -bottom-[145px] right-0 z-40
+        absolute -top-36 -bottom-28 right-0 z-40
           md:pt-0 
          aspect-[496/552]
         "
