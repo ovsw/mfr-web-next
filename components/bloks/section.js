@@ -74,7 +74,7 @@ const Section = ({ blok: section }) => {
     default: "mb-20",
     none: "",
     large: "mb-36",
-    overlapping: "-mb-32",
+    overlapping: "-mb-20",
   }
   const bottomPaddingStyles = {
     default: "pb-20",
@@ -120,9 +120,9 @@ const Section = ({ blok: section }) => {
         ${bgStyles[background]} 
 
         ${topMarginStyles[margin_top]} 
-        ${topPaddingStyles[padding_top]} 
         
-        ${bottomPaddingStyles[padding_bottom]} 
+        
+         
         ${bottomMarginStyles[margin_bottom]} 
 
         relative
@@ -132,8 +132,12 @@ const Section = ({ blok: section }) => {
           React.createElement(brushedSVGsTop[decoration_top], {
             className: `z-30 ${decorationFillColor[background]}`,
           })}
-        <div className={`${contentWidthStyles[width]} relative`}>
-          {blockIterator(content)}
+        <div
+          className={`${topPaddingStyles[padding_top]} ${bottomPaddingStyles[padding_bottom]}`}
+        >
+          <div className={`${contentWidthStyles[width]} relative`}>
+            {blockIterator(content)}
+          </div>
         </div>
         {brushedSVGsBottom[decoration_bottom] !== undefined &&
           React.createElement(brushedSVGsBottom[decoration_bottom], {
