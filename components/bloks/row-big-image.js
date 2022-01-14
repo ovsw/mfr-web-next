@@ -34,7 +34,7 @@ const Row = ({ blok: rowBigImage }) => {
       <div className="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
         <div className={`${alternateContentColumnStyles}`}>
           <div
-            className={`text-base max-w-prose mx-auto lg:max-w-lg ${alternateContentWrapperStyles} space-y-10`}
+            className={`text-base max-w-prose mx-auto lg:max-w-lg ${alternateContentWrapperStyles} space-y-16`}
           >
             {blockIterator(content)}
           </div>
@@ -43,21 +43,19 @@ const Row = ({ blok: rowBigImage }) => {
       {/* END CONTENT */}
 
       {/* IMAGE */}
-      <div className="lg:absolute lg:inset-0">
-        <div
-          className={`lg:absolute lg:inset-y-0 ${alternateImageStyles} lg:w-1/2`}
-        >
-          <div className="h-56 w-full object-cover lg:absolute lg:h-full">
-            <Image
-              className=""
-              src={image?.filename}
-              height="100%"
-              width="100%"
-              fluid={[600, 600]}
-              focus={image?.focus}
-            />
-            {/* {console.log("image?.focus}", image?.focus)} */}
-          </div>
+      <div
+        className={`lg:absolute lg:left-0 lg:top-0 h-full ${alternateImageStyles} lg:w-1/2`}
+      >
+        <div className="h-56 w-full object-cover lg:absolute lg:h-full">
+          <Image
+            className="rounded-lg"
+            src={image?.filename}
+            height="100%"
+            width="100%"
+            fluid={900}
+            focus={image?.focus}
+          />
+          {/* {console.log("image?.focus}", image?.focus)} */}
         </div>
       </div>
       {/* END IMAGE */}
