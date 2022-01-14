@@ -124,7 +124,7 @@
     leading-tight
     border border-transparent 
     text-[18px] font-bold font-serif 
-    rounded-[7px] md:rounded-[14px] shadow-sm  
+    rounded-[7px] md:rounded-[14px] shadow-lg  
     text-gray-100
     bg-gray-600 hover:bg-gray-500;
   }
