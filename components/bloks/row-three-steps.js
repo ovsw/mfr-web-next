@@ -25,7 +25,7 @@ const RowThreeSteps = ({ blok: row }) => {
         {row.steps.map((step, i) => {
           return (
             <div className="w-full md:w-1/3" key={i}>
-              <div className="hidden w-[100px] md:block md:w-[200px] mx-auto pb-16">
+              <div className="hidden w-[80px] md:block md:w-[160px] mx-auto pb-16">
                 <Image src={step.image?.filename} width="200" />
               </div>
 
@@ -52,7 +52,7 @@ const RowThreeSteps = ({ blok: row }) => {
       </div>
 
       {/* dotted path */}
-      <DottedPathSteps className="w-full absolute top-64" />
+      <DottedPathSteps className="w-full absolute top-56" />
     </div>
   )
 }
