@@ -50,17 +50,16 @@ const Row = ({ blok: rowBigImage }) => {
 
       {/* IMAGE */}
       <div
-        className={`lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 shadow-lg shadow-gray-900/20 rounded-3xl`}
+        className={`lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
       >
         <div
           className="h-56 w-full object-cover lg:absolute lg:h-full 
-        before:block before:absolute before:-inset-1 before:rotate-[-1deg] before:bg-themeFill-tertiary
-         relative before:rounded-3xl
-         before:opacity-90  before:shadow-lg before:shadow-gray-900/20
+        before:block before:absolute before:-inset-1 before:rotate-[-1deg] 
+         
         "
         >
           <Image
-            className="rounded-3xl "
+            className="rounded-2xl"
             src={image?.filename}
             height="100%"
             width="100%"
