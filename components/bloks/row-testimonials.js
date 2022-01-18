@@ -45,6 +45,25 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
             </p>
           </div>
         </div>
+
+        {/* IMAGE */}
+        <div
+          className="
+        absolute -top-24 -bottom-20 right-0 z-40
+          md:pt-0 
+         aspect-[668/872]
+        "
+        >
+          <Image
+            className=""
+            src={image?.filename}
+            height="100%"
+            width="100%"
+            fluid={[668, 872]}
+            focus={image?.focus}
+          />
+        </div>
+        {/* END IMAGE */}
       </div>
 
       {/* <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6">
