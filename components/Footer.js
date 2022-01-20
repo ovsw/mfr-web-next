@@ -121,10 +121,10 @@ export default function SiteFooter() {
       <div className="max-w-7xl mx-auto pb-12 pt-10 px-4 sm:px-6 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <h3 className="text-gray-100 font-bold tracking-wider text-4xl max-w-[10em]">
+            <h3 className="text-stone-100 font-bold tracking-wider text-4xl max-w-[10em]">
               The Fundraiser that Sells Itself
             </h3>
-            <p className="text-gray-300 text-base font-medium">
+            <p className="text-stone-300 text-base font-medium">
               Marianna's Fundraisers is a part of the DelGrosso Family of
               Companies.
             </p>
@@ -133,7 +133,7 @@ export default function SiteFooter() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-200 hover:text-gray-300"
+                  className="text-stone-200 hover:text-stone-300"
                 >
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -197,7 +197,7 @@ export default function SiteFooter() {
           </div>
         </div>
         <div className="mt-12 border-t border-tertiary-900 pt-8">
-          <p className="text-base text-gray-300 xl:text-center">
+          <p className="text-base text-stone-300 xl:text-center">
             &copy; 2020 Workflow, Inc. All rights reserved.
           </p>
         </div>

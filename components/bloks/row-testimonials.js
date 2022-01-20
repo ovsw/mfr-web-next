@@ -36,7 +36,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
               </p>
             </div>
           </div>
-          <div className="flex flex-col  px-12 py-10 pt-0 text-gray-300 tracking-wider">
+          <div className="flex flex-col  px-12 py-10 pt-0 text-stone-300 tracking-wider">
             <p className="text-base font-semibold leading-4 my-2">
               {testimonials_list[1].author_name}
             </p>
@@ -70,7 +70,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
         {testimonials_list.map(testimonial => (
           <div className="bg-white" key={testimonial._uid}>
             <div className="w-full relative flex flex-col items-center md:p-12 p-6">
-              <div className="text-gray-600  flex flex-col ">
+              <div className="text-stone-600  flex flex-col ">
                 <QuoteSvg />
                 <p className="xl:w-80 text-xl mt-4 italic">
                   {testimonial.text}
@@ -83,10 +83,10 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
               alt="profile pictre"
               className="w-12 h-12"
             /> 
-              <p className="text-base font-semibold leading-4 my-2 text-gray-800">
+              <p className="text-base font-semibold leading-4 my-2 text-stone-800">
                 {testimonial.author_name}
               </p>
-              <p className="text-base leading-4  text-gray-600">
+              <p className="text-base leading-4  text-stone-600">
                 {testimonial.author_info}
               </p>
             </div>

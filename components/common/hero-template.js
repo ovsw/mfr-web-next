@@ -17,7 +17,7 @@ const HeroTemplate = ({ background_image, children, border_color }) => {
 
   return (
     <div className="Hero">
-      <div className="relative bg-gray-300">
+      <div className="relative bg-stone-300">
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-green-600" />
         {/* IMAGE */}
         {background_image?.filename && (

@@ -13,15 +13,15 @@ const DesktopDropdown = ({ title, items }) => {
         <>
           <Popover.Button
             className={classNames(
-              open ? "text-gray-700" : "text-gray-900",
-              "group bg-white rounded-md inline-flex items-center text-base font-serif hover:text-gray-900 focus:outline focus:outline-offset-8 focus:outline-gray-500"
+              !open ? "text-stone-600" : "text-red-800",
+              "main-menu-item group bg-white inline-flex items-center"
             )}
           >
             <span>{title}</span>
             <ChevronDownIcon
               className={classNames(
-                open ? "text-gray-600" : "text-gray-400",
-                "ml-2 h-5 w-5 group-hover:text-gray-500"
+                open ? "text-stone-600" : "text-stone-400",
+                "ml-2 h-5 w-5 group-hover:text-stone-500"
               )}
               aria-hidden="true"
             />
@@ -43,7 +43,7 @@ const DesktopDropdown = ({ title, items }) => {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-stone-50"
                     >
                       <div
                         className="
@@ -56,10 +56,10 @@ const DesktopDropdown = ({ title, items }) => {
                         <item.icon className="h-6 w-6" aria-hidden="true" />
                       </div>
                       <div className="ml-4">
-                        <p className="text-base font-bold font-serif text-gray-600">
+                        <p className="text-base font-bold font-serif text-stone-600">
                           {item.name}
                         </p>
-                        <p className="mt-1 text-sm text-gray-500">
+                        <p className="mt-1 text-sm text-stone-500">
                           {item.description}
                         </p>
                       </div>

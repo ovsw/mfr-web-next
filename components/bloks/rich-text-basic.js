@@ -14,11 +14,13 @@ const RichTextBasic = ({ blok: richTextBasic }) => {
 
   const rootStyles =
     sectionTheme != undefined
-      ? `${sectionTheme.bgValue == "dark" ? "text-gray-300" : "text-dark-body"}`
+      ? `${
+          sectionTheme.bgValue == "dark" ? "text-neutral-300" : "text-dark-body"
+        }`
       : ""
 
   return (
-    <div className={`prose prose-stone prose-2xl opacity-70  ${rootStyles}`}>
+    <div className={`prose prose-neutral prose-2xl opacity-70  ${rootStyles}`}>
       <RichTextRenderer data={richTextBasic.text} />
     </div>
   )

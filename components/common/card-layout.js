@@ -10,7 +10,7 @@ const CardLayout = ({ image, content }) => {
   return (
     <div className=" my-4">
       {image ? image : <p>missing card image</p>}
-      <div className="space-y-6 bg-gray-100 p-6 pt-10">
+      <div className="space-y-6 bg-stone-100 p-6 pt-10">
         {content ? content : "missing card content"}
       </div>
     </div>

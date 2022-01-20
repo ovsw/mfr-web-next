@@ -50,7 +50,7 @@ const Header = ({ props }) => {
 
           {/* MOBILE TRIGGER */}
           <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
+            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-stone-400 hover:text-stone-500 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
@@ -62,18 +62,13 @@ const Header = ({ props }) => {
             <DesktopDropdown title="Fundraisers" items={fundraisers} />
 
             <Link href="/menu">
-              <a className="text-base  text-gray-800 font-serif pt-[1px] hover:text-gray-800">
-                Menu
-              </a>
+              <a className="main-menu-item text-stone-800">Menu</a>
             </Link>
 
             <DesktopDropdown title="About Us" items={aboutUs} />
             <DesktopDropdown title="Selling Tools" items={tools} />
 
-            <a
-              href="#"
-              className="text-base  text-gray-800 font-serif pt-[1px] hover:text-gray-800"
-            >
+            <a href="#" className="main-menu-item text-stone-800">
               Contact Us
             </a>
           </Popover.Group>
@@ -81,7 +76,7 @@ const Header = ({ props }) => {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             {/* <a
               href="#"
-              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              className="whitespace-nowrap text-base font-medium text-stone-500 hover:text-stone-900"
             >
               Sign in
             </a> */}
@@ -129,7 +124,7 @@ const Header = ({ props }) => {
                   </Link>
 
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent">
+                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-stone-400 hover:text-stone-500 hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="h-6 w-6" aria-hidden="true" />
                     </Popover.Button>
@@ -144,12 +139,12 @@ const Header = ({ props }) => {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-lg hover:bg-stone-50"
                       >
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-gradient-to-r from-red-600 to-accent text-white">
                           <item.icon className="h-6 w-6" aria-hidden="true" />
                         </div>
-                        <div className="ml-4 text-base font-medium text-gray-900">
+                        <div className="ml-4 text-base font-medium text-stone-900">
                           {item.name}
                         </div>
                       </a>
@@ -166,19 +161,19 @@ const Header = ({ props }) => {
                 <div className="grid grid-cols-2 gap-4">
                   <a
                     href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    className="text-base font-medium text-stone-900 hover:text-stone-700"
                   >
                     Pricing
                   </a>
                   <a
                     href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    className="text-base font-medium text-stone-900 hover:text-stone-700"
                   >
                     Partners
                   </a>
                   <a
                     href="#"
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    className="text-base font-medium text-stone-900 hover:text-stone-700"
                   >
                     Company
                   </a>
@@ -193,9 +188,9 @@ const Header = ({ props }) => {
                   >
                     Sign up
                   </a>
-                  <p className="mt-6 text-center text-base font-medium text-gray-500">
+                  <p className="mt-6 text-center text-base font-medium text-stone-500">
                     Existing customer?
-                    <a href="#" className="text-gray-900">
+                    <a href="#" className="text-stone-900">
                       Sign in
                     </a>
                   </p>

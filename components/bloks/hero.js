@@ -29,7 +29,7 @@ const Hero = ({ blok: hero }) => {
           </span>
           {/* <span className="block text-green-200">customer support</span> */}
         </h1>
-        <div className="mt-6 xl:max-w-lg text-left text-xl text-gray-400 leading-relaxed tracking-wide">
+        <div className="mt-6 xl:max-w-lg text-left text-xl text-stone-400 leading-relaxed tracking-wide">
           <RichTextRenderer data={text} />
         </div>
 
