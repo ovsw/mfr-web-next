@@ -172,11 +172,20 @@
     after:-bottom-[0.3em] after:-left-[0.125em] after:-right-[0.125em] after:h-[0.4em] 
     after:bg-[url('/images/svg/underline.svg')] after:bg-no-repeat  after:bg-cover after:!fill-accent-500;
   } */
+
+  :focus {
+    @apply outline-none;
+  }
+  :focus-visible {
+    @apply before:absolute
+    before:-inset-2
+    before:shadow-focus before:rounded-xl outline-none;
+  }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center 
+    @apply relative inline-flex items-center justify-center 
     px-4 py-3 sm:px-[40px] sm:py-[20px]
     leading-tight
     border border-transparent 
@@ -278,8 +287,7 @@
 
   .main-menu-item {
     @apply text-base rounded-md 
-    font-bold font-sans 
-    
-    focus:outline focus:outline-offset-8 focus:outline-gray-500;
+    font-bold font-sans
+    relative;
   }
 }

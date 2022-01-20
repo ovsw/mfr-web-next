@@ -244,7 +244,7 @@ const fundraisers = [
   {
     name: "Schedule Free a Tasting",
     description:
-      "Sample all our famous hoagies and delicios pizzas, and get a personal consultation from our experts.",
+      "Sample all our famous food, and get a personal consultation from our experts.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
@@ -253,15 +253,14 @@ const fundraisers = [
 const aboutUs = [
   {
     name: "Fresh & Clean Obsessed",
-    description:
-      "We believe in only offering food we love to eat ourselves. Learn more about our philosophy.",
+    description: "We believe in only offering food we love to eat ourselves.",
     href: "#",
     icon: InboxIcon,
   },
   {
     name: "Hoagie Heroes",
     description:
-      "We believe in empowering people to make a difference for the causes they believe in. Everyone can be a Hoagie Hero!",
+      "How we empower people to make a difference for the causes they believe in.",
     href: "#",
     icon: AnnotationIcon,
   },
@@ -274,14 +273,14 @@ const aboutUs = [
   {
     name: "Our Story and Promise",
     description:
-      "Marianna's is now over 40 years old! Find out how it all began, and why we do what we do.",
+      "Marianna's is now over 40 years old! How it all began, and why we do what we do.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "News & Events",
     description:
-      "Marianna's Blog offers guides, useful tips and news about our events, promotions and special offers.",
+      "Guides, useful tips and news about our events, promotions and special offers.",
     href: "#",
     icon: QuestionMarkCircleIcon,
   },
@@ -304,7 +303,7 @@ const tools = [
   {
     name: "Documents and Forms",
     description:
-      "Everythging you need in terms of paperwork to run a sucessful fundraiser with Marianna's",
+      "Everything you need in terms of paperwork to run a sucessful fundraiser with Marianna's",
     href: "#",
     icon: AnnotationIcon,
   },
