@@ -35,15 +35,43 @@ module.exports = {
   darkMode: "media", // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ["Geomanist", "sans-serif"],
-      serif: ["americane"],
-      cursive: ["fave-script-pro", "cursive"],
+      // sans: ["Geomanist", "sans-serif"],
+      sans: ["gilroy", "sans-serif"],
+      // serif: ["americane"],
+      serif: ["gilroy"],
+      // cursive: ["fave-script-pro", "cursive"],
+      cursive: ["Kalam", "cursive"],
     },
     extend: {
       colors: {
         primary: "#00764F",
-        accent: "rgba(224, 0, 51, 1)",
-        tertiary: "#FEF7C1",
+        // accent: "rgba(224, 0, 51, 1)",
+        accent: {
+          DEFAULT: "#CC083E",
+          50: "#FB91A1",
+          100: "#FA7D90",
+          200: "#F8566E",
+          300: "#F72F4D",
+          400: "#F30A3C",
+          500: "#CC081C",
+          600: "#960620",
+          700: "#60041E",
+          800: "#2A020D",
+          900: "#000000",
+        },
+        tertiary: {
+          DEFAULT: "#FEF7C1",
+          50: "#FFFFFF",
+          100: "#FFFFFF",
+          200: "#FFFFFF",
+          300: "#FFFFFF",
+          400: "#FFFCE9",
+          500: "#FEF7C1",
+          600: "#FDEF85",
+          700: "#FCE749",
+          800: "#FBE00C",
+          900: "#C7B103",
+        },
       },
       textColor: {
         theme: {

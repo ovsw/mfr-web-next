@@ -36,7 +36,7 @@ const Row = ({ blok: rowBigImage }) => {
       <div
         className={`relative 
       ${paddingStyles}
-      lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2`}
+      lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2`}
       >
         <div className={`${alternateContentColumnStyles}`}>
           <div

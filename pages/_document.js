@@ -8,6 +8,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="stylesheet" href="https://use.typekit.net/ops4vzn.css" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+            rel="stylesheet"
+          />
           {/* <link
             href="https://fonts.googleapis.com/css2?family=Inter&display=optional"
             rel="stylesheet"
