@@ -16,9 +16,9 @@ export default function Page({ story, preview }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
+      {/* <header>
         <h1>{story ? story.name : "My Site"}</h1>
-      </header>
+      </header> */}
 
       <DynamicComponent blok={story.content} />
     </div>
