@@ -30,9 +30,9 @@ const Row = ({ blok: rowCta }) => {
       {/* image */}
       <div
         className="
-        absolute -top-[160px] -bottom-36 right-0 z-40
+        absolute -top-[160px] -bottom-28 right-0 z-40
           md:pt-0 
-         aspect-[496/552]
+         aspect-[800/889]
         "
       >
         <Image
@@ -40,7 +40,7 @@ const Row = ({ blok: rowCta }) => {
           src={image?.filename}
           height="100%"
           width="100%"
-          fluid={[496, 552]}
+          fluid={[800, 889]}
           focus={image?.focus}
         />
       </div>
