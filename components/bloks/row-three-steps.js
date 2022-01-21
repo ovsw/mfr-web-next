@@ -21,7 +21,7 @@ const RowThreeSteps = ({ blok: row }) => {
   return (
     <div className={textStyles}>
       {/* <h2>This is a thre column row</h2> */}
-      <div className="flex flex-col md:flex-row space-y-14 md:space-y-0 mb-28 relative z-30">
+      <div className="flex flex-col md:flex-row space-y-14 md:space-y-0 mb-28 relative z-30 pt-5">
         {row.steps.map((step, i) => {
           return (
             <div className="w-full md:w-1/3" key={i}>
@@ -29,22 +29,26 @@ const RowThreeSteps = ({ blok: row }) => {
                 <Image src={step.image?.filename} width="200" />
               </div>
 
-              <h3 className="text-3xl relative">
-                <span
-                  className="inline-block
-                  text-3xl py-[0.25em] w-[1.7em]
-                  lg:text-5xl lg:py-[0.35em] lg:w-[1.7em]
-                  absolute font-bold   bg-themeFill-accent text-white rounded-full text-center"
-                >
-                  {i + 1}
-                </span>
+              <div className="pl-20">
+                <h3 className="text-3xl relative">
+                  <span
+                    className="block
+                  text-2xl  w-[1.2em]
+                  lg:text-3xl  
+                  absolute font-semibold bg-themeFill-accent text-white rounded-full text-center top-2
+                   
+                  "
+                  >
+                    {i + 1}
+                  </span>
 
-                <span className="inline-block pt-2 pl-20 md:pl-24">
-                  {step.title}
-                </span>
-              </h3>
-              <div className="pl-24 md:pl-28 pt-4 custom-list-bullets text-xl">
-                <RichTextRenderer data={step.description} className="" />
+                  <span className="inline-block pt-2 pl-20 md:pl-12">
+                    {step.title}
+                  </span>
+                </h3>
+                <div className="pl-24 md:pl-14 pt-4 custom-list-bullets text-lg">
+                  <RichTextRenderer data={step.description} className="" />
+                </div>
               </div>
             </div>
           )
@@ -52,7 +56,7 @@ const RowThreeSteps = ({ blok: row }) => {
       </div>
 
       {/* dotted path */}
-      <DottedPathSteps className="w-full absolute top-56" />
+      <DottedPathSteps className="w-full absolute top-60 h-32" />
     </div>
   )
 }
