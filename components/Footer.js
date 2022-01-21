@@ -1,26 +1,39 @@
-/* This example requires Tailwind CSS v2.0+ */
+import Image from "next/image"
+import Link from "next/link"
+
+import FooterLogo from "../public/images/mariannas-fundraisers-logo-2022-white.png"
+
 const navigation = {
-  solutions: [
-    { name: "Marketing", href: "#" },
-    { name: "Analytics", href: "#" },
-    { name: "Commerce", href: "#" },
-    { name: "Insights", href: "#" },
+  fundraisers: [
+    { name: "How it Works", href: "/how-it-works/" },
+    { name: "Benefits", href: "/the-fundraiser-that-sells-itself/" },
+    { name: "Menu", href: "/menu/" },
+    { name: "Schedule Free Tasting", href: "/schedule-a-free-tasting/" },
   ],
-  support: [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Status", href: "#" },
+  // aboutUs: [
+  //   // { name: "Fresh & Clean Obsessed", href: "/fresh-and-clean-obsessed/" },
+  //   { name: "Hoagie Heroes", href: "/hoagie-heroes/" },
+  //   { name: "How it's Made", href: "/how-it-is-made/" },
+  //   { name: "Our Story", href: "/our-story-and-promise/" },
+  //   { name: "News & Events", href: "/blog/" },
+  // ],
+  aboutUs: [
+    { name: "Pricing Info", href: "/pricing-info/" },
+    { name: "Resources", href: "/fundraiser-resources/" },
+    { name: "Get Assistance", href: "/get-assistance/" },
+    { name: "Contact", href: "/contact-us/" },
   ],
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "Hoagie Heroes", href: "/hoagie-heroes/" },
+    { name: "Our Story", href: "/our-story-and-promise/" },
+    { name: "News & Events", href: "/blog/" },
     { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Partners", href: "#" },
+    // { name: "Press", href: "#" },
+    // { name: "Partners", href: "#" },
   ],
   legal: [
-    { name: "Claim", href: "#" },
+    { name: "Accessibility Statement", href: "#" },
+    { name: "Accessibility Policy", href: "#" },
     { name: "Privacy", href: "#" },
     { name: "Terms", href: "#" },
   ],
@@ -95,19 +108,21 @@ export default function SiteFooter() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
+
+      {/* TOP ROW */}
       <div
         className="
-      max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:pt-16 lg:px-8 text-white 
+      max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:pb-0 lg:pt-16 lg:px-8 text-white 
       flex items-center justify-between
       "
       >
-        <div className="flex items-center">
-          <img
-            className="h-10 mr-10"
-            src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg"
+        <div className="w-60 ">
+          <Image
+            className="mr-10"
+            src={FooterLogo}
             alt="Marianna's Fundraisers"
+            fit="fit"
           />
-          <p>Marianna's Fundraisers</p>
         </div>
         <p className="justify-self-end">
           <a
@@ -118,12 +133,14 @@ export default function SiteFooter() {
           </a>
         </p>
       </div>
-      <div className="max-w-7xl mx-auto pb-12 pt-10 px-4 sm:px-6 lg:px-8">
+      {/* END TOP ROW */}
+
+      <div className="max-w-7xl mx-auto pb-12 pt-6 px-4 sm:px-6 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <h3 className="text-stone-100 font-bold tracking-wider text-4xl max-w-[10em]">
+            <p className="text-stone-300 text-xl font-medium">
               The Fundraiser that Sells Itself
-            </h3>
+            </p>
             <p className="text-stone-300 text-base font-medium">
               Marianna's Fundraisers is a part of the DelGrosso Family of
               Companies.
@@ -144,13 +161,15 @@ export default function SiteFooter() {
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="footer-col-heading">Solutions</h3>
+                <h3 className="footer-col-heading">Fundraisers</h3>
                 <ul role="list" className="mt-4 space-y-4">
-                  {navigation.solutions.map(item => (
+                  {navigation.fundraisers.map(item => (
                     <li key={item.name}>
-                      <a href={item.href} className="footer-col-list-item">
-                        {item.name}
-                      </a>
+                      <Link href={item.href}>
+                        <a href={item.href} className="footer-col-list-item">
+                          {item.name}
+                        </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -158,11 +177,11 @@ export default function SiteFooter() {
               <div className="mt-12 md:mt-0">
                 <h3 className="footer-col-heading">Support</h3>
                 <ul role="list" className="mt-4 space-y-4">
-                  {navigation.support.map(item => (
+                  {navigation.aboutUs.map(item => (
                     <li key={item.name}>
-                      <a href={item.href} className="footer-col-list-item">
-                        {item.name}
-                      </a>
+                      <Link href={item.href}>
+                        <a className="footer-col-list-item">{item.name}</a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -174,9 +193,9 @@ export default function SiteFooter() {
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map(item => (
                     <li key={item.name}>
-                      <a href={item.href} className="footer-col-list-item">
-                        {item.name}
-                      </a>
+                      <Link href={item.href}>
+                        <a className="footer-col-list-item">{item.name}</a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -198,7 +217,14 @@ export default function SiteFooter() {
         </div>
         <div className="mt-12 border-t border-tertiary-900 pt-8">
           <p className="text-base text-stone-300 xl:text-center">
-            &copy; 2020 Workflow, Inc. All rights reserved.
+            &copy; 2022 DelGrosso Foods, Inc. All rights reserved. | Website by{" "}
+            <a
+              href="https://studiorovst.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Studio Rovst
+            </a>
           </p>
         </div>
       </div>
