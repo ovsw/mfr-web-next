@@ -61,16 +61,16 @@ const Header = ({ props }) => {
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             <DesktopDropdown title="Fundraisers" items={fundraisers} />
 
-            <Link href="/menu">
+            <Link href="/menu/">
               <a className="main-menu-item text-stone-800">Menu</a>
             </Link>
 
             <DesktopDropdown title="About Us" items={aboutUs} />
             <DesktopDropdown title="Selling Tools" items={tools} />
 
-            <a href="#" className="main-menu-item text-stone-800">
-              Contact Us
-            </a>
+            <Link href="/contact-us/">
+              <a className="main-menu-item text-stone-800">Contact Us</a>
+            </Link>
           </Popover.Group>
 
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -212,40 +212,40 @@ const fundraisers = [
     name: "How it Works",
     description:
       "A full rundown of the process, from first contact to delivery.",
-    href: "#",
+    href: "/how-it-works/",
     icon: InboxIcon,
   },
   {
     name: "Pricing Info",
     description:
       "Our pricing structure and ways to get a quote for your fundraiser.",
-    href: "#",
+    href: "/pricing-info/",
     icon: AnnotationIcon,
   },
   {
     name: "Benefits",
     description: "Why Marianna's truly is 'The Fundraiser that Sells Itself'.",
-    href: "#",
+    href: "/the-fundraiser-that-sells-itself/",
     icon: ChatAlt2Icon,
   },
   {
     name: "Fundraiser Resources",
     description: "Guides and Info on how to runn a succesful fundraiser.",
-    href: "#",
+    href: "/fundraiser-resources/",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Get Assistance",
     description:
       "Have a question? Need help with your fundraiser? We're one phone call away!",
-    href: "#",
+    href: "/get-assistance/",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Schedule Free a Tasting",
     description:
       "Sample all our famous food, and get a personal consultation from our experts.",
-    href: "#",
+    href: "/schedule-a-free-tasting/",
     icon: QuestionMarkCircleIcon,
   },
 ]
@@ -254,27 +254,27 @@ const aboutUs = [
   {
     name: "Fresh & Clean Obsessed",
     description: "We believe in only offering food we love to eat ourselves.",
-    href: "#",
+    href: "/fresh-and-clean-obsessed/",
     icon: InboxIcon,
   },
   {
     name: "Hoagie Heroes",
     description:
       "How we empower people to make a difference for the causes they believe in.",
-    href: "#",
+    href: "/hoagie-heroes/",
     icon: AnnotationIcon,
   },
   {
     name: "How it's Made",
     description: "A look behind the scenes at how the Famous Hoagies are made.",
-    href: "#",
+    href: "/how-it-is-made/",
     icon: ChatAlt2Icon,
   },
   {
     name: "Our Story and Promise",
     description:
-      "Marianna's is now over 40 years old! How it all began, and why we do what we do.",
-    href: "#",
+      "Marianna's is now over 40 years old! How it all began, and why we do it.",
+    href: "/our-story-and-promise/",
     icon: QuestionMarkCircleIcon,
   },
   {
