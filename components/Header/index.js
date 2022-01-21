@@ -287,7 +287,7 @@ const aboutUs = [
   {
     name: "Testimonials",
     description: "Hear from the Hoagie Heroes.",
-    href: "#",
+    href: "/testimonials/",
     icon: QuestionMarkCircleIcon,
   },
 ]
@@ -297,7 +297,7 @@ const tools = [
     name: "10 Steps to Success",
     description:
       "We believe in only offering food we love to eat ourselves. Learn more about our philosophy.",
-    href: "#",
+    href: "/10-steps-to-success/",
     icon: InboxIcon,
   },
   {
@@ -311,27 +311,27 @@ const tools = [
     name: "Advertising Templates",
     description:
       "Adverting posters, product labels, social media images to help you advertise and run your fundraiser.",
-    href: "#",
+    href: "/advertising-templates/",
     icon: ChatAlt2Icon,
   },
   {
     name: "Fundraiser FAQs",
     description:
       "Frequent questions and just as many answers - a trove of useful info about running a successful fundraiser.",
-    href: "#",
+    href: "/fundraiser-frequently-asked-questions/",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Get Support",
-    description: "We're always one phone call away!",
-    href: "#",
+    description: "  ",
+    href: "/get-support/",
     icon: QuestionMarkCircleIcon,
   },
   {
     name: "Submit Your Order",
     description:
       "Us this to submit your order to us, once your're done selling.",
-    href: "#",
+    href: "/submit-your-order/",
     icon: QuestionMarkCircleIcon,
   },
 ]
