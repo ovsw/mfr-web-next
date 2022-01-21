@@ -5,15 +5,15 @@ const HeroTemplate = ({ background_image, children, border_color }) => {
   // console.log("background_image", background_image)
 
   const brushBorderThemes = {
-    white: "fill-theme-white",
+    light: "fill-theme-white",
+    shaded: "fill-theme-offWhite",
     green: "fill-theme-primary",
     red: "fill-theme-accent",
-    yellow: "fill-theme-offWhite",
   }
-  const dynamicBrushStyles =
-    border_color !== undefined
-      ? brushBorderThemes[border_color]
-      : "fill-theme-white"
+  // const dynamicBrushStyles =
+  //   border_color !== undefined
+  //     ? brushBorderThemes[border_color]
+  //     : "fill-theme-white"
 
   return (
     <div className="Hero">
@@ -44,7 +44,7 @@ const HeroTemplate = ({ background_image, children, border_color }) => {
           </div>
         </div>
         <SectionBrush1
-          className={`absolute -bottom-20 z-30 ${dynamicBrushStyles}`}
+          className={`absolute -bottom-20 z-30 ${brushBorderThemes[border_color]}`}
         />
       </div>
     </div>
