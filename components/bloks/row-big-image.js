@@ -36,7 +36,7 @@ const Row = ({ blok: rowBigImage }) => {
       <div
         className={`relative 
       ${paddingStyles}
-      lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2`}
+      lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 min-h-[400px]`}
       >
         <div className={`${alternateContentColumnStyles}`}>
           <div
@@ -55,7 +55,6 @@ const Row = ({ blok: rowBigImage }) => {
         <div
           className="h-56 w-full object-cover lg:absolute lg:h-full 
         before:block before:absolute before:-inset-1 before:rotate-[-1deg] 
-         
         "
         >
           <Image
