@@ -27,7 +27,7 @@ const navigation = {
     { name: "Hoagie Heroes", href: "/hoagie-heroes/" },
     { name: "Our Story", href: "/our-story-and-promise/" },
     { name: "News & Events", href: "/blog/" },
-    { name: "Jobs", href: "#" },
+    { name: "Jobs", href: "/" },
     // { name: "Press", href: "#" },
     // { name: "Partners", href: "#" },
   ],
