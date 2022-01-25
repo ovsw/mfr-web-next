@@ -34,9 +34,9 @@ const Header = ({ props }) => {
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 md:py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           {/* LOGO */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="">
+            <Link href="/">
               <a className="w-40 pt-2 md:pt-0 md:h-10 relative">
-                <span className="sr-only">Workflow</span>
+                <span className="sr-only">Marianna's Fundraisers</span>
                 <Image
                   className=""
                   src={DesktopLogo}
