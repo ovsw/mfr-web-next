@@ -9,47 +9,61 @@ import Link from "next/link"
 const Hoagie = ({ blok: hoagie }) => {
   // console.log("hoagie", hoagie.link)
 
+  const { name, dressing, description, link, image } = hoagie
+
+  const reversed = false
+  const contentStyles = reversed ? "lg:col-start-2" : ""
+
+  const imageWrapperStyles = reversed ? "lg:left-0" : "lg:right-0"
+  const imageStyles = reversed ? "right-0" : "left-0"
+
   return (
-    <li className="rounded md:flex items-center">
+    <li className="relative full-width">
       {/* IMAGE */}
-      <div className="md:w-1/2">
-        {hoagie.image && (
+      <div className={`lg:absolute lg:top-20 ${imageWrapperStyles} lg:w-1/2`}>
+        <div className={`lg:absolute ${imageStyles} w-[1200px]`}>
           <Image
-            className="object-cover"
-            src={hoagie.image?.filename}
-            width="100%"
+            className=""
+            src={image?.filename}
             height="100%"
-            fluid={600}
-            focus={hoagie.image?.focus}
+            width="100%"
+            fluid={1200}
+            focus={image?.focus}
           />
-        )}
+        </div>
       </div>
       {/* END IMAGE */}
 
       {/* CONTENT */}
-      <div className="content md:w-1/2 space-y-6 md:pl-10">
-        <h3 className="text-4xl text-dark">
-          14" <strong>{hoagie.name}</strong> hoagie
-        </h3>
-        {hoagie.dressing == "italian" ? (
-          <p className="uppercase">
-            with Marianna's <strong>Itallian Dressing</strong>
-          </p>
-        ) : (
-          <p className="uppercase">
-            with Marianna's <strong>Sweet & Sassy Mayo</strong>
-          </p>
-        )}
+      <div className="contentGrid relative pt-12 pb-16 px-4 sm:pt-32 sm:px-6 lg:px-10 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 lg:min-h-[550px]">
+        <div className={`${contentStyles} lg:flex lg:items-center lg:pb-24`}>
+          <div className="text-base max-w-prose lg:max-w-lg px-6 lg:px-0 space-y-8">
+            <div>
+              <h2 className="mt-2 text-3xl leading-8 tracking-tight text-gray-900 sm:text-4xl">
+                <span className="font-bold">{name}</span> Hoagie
+              </h2>
+              <p className="leading-6 font-semibold tracking-wide uppercase mt-3">
+                with Marianna's{" "}
+                <span className="text-accent-500">
+                  {dressing == "italian"
+                    ? "Itallian Dressinng"
+                    : "Sweet & Sassy Mayo"}
+                </span>
+              </p>
+            </div>
 
-        <p className="max-w-lg">{hoagie.description}</p>
-
-        {hoagie.link.cached_url != "" && (
-          <div className="inline-grid">
-            <Link href={`/${hoagie.link.cached_url}`}>
-              <a className="btn btn-accent">Details</a>
-            </Link>
+            <p className="prose prose-lg prose-indigo text-gray-500 lg:max-w-lg">
+              {description}
+            </p>
+            {link.cached_url != "" && (
+              <div className="inline-grid">
+                <Link href={`/${link.cached_url}`}>
+                  <a className="btn btn-accent">Details</a>
+                </Link>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
       {/* END CONTENT */}
     </li>
