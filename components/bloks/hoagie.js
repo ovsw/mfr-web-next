@@ -35,8 +35,8 @@ const Hoagie = ({ blok: hoagie }) => {
       {/* END IMAGE */}
 
       {/* CONTENT */}
-      <div className="contentGrid relative pt-12 pb-16 px-4 sm:pt-32 sm:px-6 lg:px-10 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 lg:min-h-[550px]">
-        <div className={`${contentStyles} lg:flex lg:items-center lg:pb-24`}>
+      <div className="contentGrid relative pt-12 pb-16 px-4 sm:pt-32 sm:px-6 lg:px-10 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2 lg:min-h-[400px]">
+        <div className={`${contentStyles} lg:flex lg:items-center lg:pb-12`}>
           <div className="text-base max-w-prose lg:max-w-lg px-6 lg:px-0 space-y-8">
             <div>
               <h2 className="mt-2 text-3xl leading-8 tracking-tight text-gray-900 sm:text-4xl">
