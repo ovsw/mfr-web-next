@@ -253,9 +253,16 @@
   .custom-list-bullets ul li p {
     display: inline-block;
   }
-  ul.custom-bullets li p {
+  ul.custom-bullets li p,
+  .prose ul li p {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+  }
+
+  .nutrition-table td,
+  .nutrition-table th {
+    @apply border-b border-slate-600
+     py-[2px];
   }
 }
 

@@ -28,6 +28,7 @@ import Hoagie from "./bloks/hoagie"
 import RowThreeSteps from "./bloks/row-three-steps"
 import Step from "./bloks/step"
 import RowMenuTeaserOneOff from "./bloks/row-menu-teaser-one-off"
+import NutritionTable from "./bloks/nutrition-table"
 
 const BlokComponents = {
   page: Page,
@@ -55,6 +56,7 @@ const BlokComponents = {
   "row-steps": RowThreeSteps,
   step: Step,
   "row-menu-teaser-one-off": RowMenuTeaserOneOff,
+  "nutrition-table": NutritionTable,
 }
 
 const Dc = ({ blok }) => {
