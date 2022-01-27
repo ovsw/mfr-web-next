@@ -17,7 +17,8 @@ const Row = ({ blok: rowBigImage }) => {
   const sectionTheme = React.useContext(SectionThemeContext)
   const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : ""
 
-  const { content, image, is_reversed, extra_padding } = rowBigImage
+  const { content, image, is_reversed, extra_padding, contain_image } =
+    rowBigImage
 
   const alternateContentWrapperStyles = is_reversed
     ? "lg:ml-auto lg:mr-0"
@@ -53,7 +54,7 @@ const Row = ({ blok: rowBigImage }) => {
         className={`lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
       >
         <div
-          className="h-56 w-full object-cover lg:absolute lg:h-full 
+          className="h-56 w-full object-fit lg:absolute lg:h-full 
         before:block before:absolute before:-inset-1 before:rotate-[-1deg] 
         "
         >
@@ -64,6 +65,7 @@ const Row = ({ blok: rowBigImage }) => {
             width="100%"
             fluid={900}
             focus={image?.focus}
+            fit={contain_image ? "contain" : "cover"}
           />
           {/* {console.log("image?.focus}", image?.focus)} */}
         </div>
