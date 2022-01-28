@@ -13,12 +13,13 @@
 
 // import * as React from "react"
 import Link from "next/link"
+import Icon from "../Icon"
 
 const Button = ({ blok: button }) => {
   // console.log("button component", button)
 
   const { url, linktype, cached_url } = button.link
-  const { target, style, text } = button
+  const { target, style, text, icon, icon_position } = button
 
   const styleVariants = {
     primary: "btn-primary",
@@ -28,17 +29,35 @@ const Button = ({ blok: button }) => {
     dark: "btn-dark",
   }
 
+  const iconStyles = {
+    left: "pl-6 sm:py-[18px]",
+    right: "pr-6 sm:py-[18px]",
+    none: "",
+  }
+
   // console.log("BUTTON STYLE PROP", text, button, styleVariants[style])
 
-  const btnStyles = `btn ${
-    styleVariants[style] != undefined ? styleVariants[style] : ""
-  }`
+  const btnStyles = `btn 
+    ${styleVariants[style] != undefined ? styleVariants[style] : ""} 
+    ${iconStyles[icon_position] != undefined ? iconStyles[icon_position] : ""}
+  `
 
+  // PREPARE ICONS
+  const LeftIcon = (
+    <Icon name={icon} height="1.5em" width title="icon" className="mr-3" />
+  )
+  const RightIcon = (
+    <Icon name={icon} height="1.5em" width title="icon" className="ml-3" />
+  )
+
+  // RETURN DIFFERENT TYPES OF BUTTONS
   if (linktype === "email") {
     // Email links: add `mailto:` scheme and map to <a>
     return (
       <a href={`mailto:${url}`} className={btnStyles}>
+        {icon_position == "left" && LeftIcon}
         {text}
+        {icon_position == "right" && RightIcon}
       </a>
     )
   }
@@ -50,7 +69,9 @@ const Button = ({ blok: button }) => {
         target={target ? "_blank" : undefined}
         className={btnStyles}
       >
+        {icon_position == "left" && LeftIcon}
         {text}
+        {icon_position == "right" && RightIcon}
       </a>
     )
   }
@@ -64,11 +85,13 @@ const Button = ({ blok: button }) => {
         href={
           destinationPageUrl != undefined
             ? destinationPageUrl
-            : "#UNDEFINED LINK"
+            : "#UNDEFINED-LINK"
         }
       >
         <a target={target ? "_blank" : undefined} className={btnStyles}>
+          {icon_position == "left" && LeftIcon}
           {text}
+          {icon_position == "right" && RightIcon}
         </a>
       </Link>
     )

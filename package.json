@@ -8,7 +8,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "svgr": "npx @svgr/cli --icon --replace-attr-values '#000000=currentColor' icon.svg"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
@@ -25,6 +26,7 @@
     "util": "^0.12.4"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.2.0",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.0",
     "tailwindcss": "^3.0.7"
