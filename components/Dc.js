@@ -29,6 +29,7 @@ import RowThreeSteps from "./bloks/row-three-steps"
 import Step from "./bloks/step"
 import RowMenuTeaserOneOff from "./bloks/row-menu-teaser-one-off"
 import NutritionTable from "./bloks/nutrition-table"
+import FeatureGroup from "./bloks/feature-group"
 
 const BlokComponents = {
   page: Page,
@@ -57,6 +58,7 @@ const BlokComponents = {
   step: Step,
   "row-menu-teaser-one-off": RowMenuTeaserOneOff,
   "nutrition-table": NutritionTable,
+  "feature-group": FeatureGroup,
 }
 
 const Dc = ({ blok }) => {
