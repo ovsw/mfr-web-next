@@ -50,10 +50,22 @@ const NutritionTable = ({ blok: nutritionTable }) => {
   return (
     <div className={`${rootStyles} flex lg:pt-8`}>
       <div className="bg-white mx-auto px-2 border-2 border-stone-900">
+        <div
+          className="text-black  font-bold
+        border-t-[20px] border-stone-900
+        border-b-8 
+        pb-3 pt-2"
+        >
+          <p className="text-lg">Amount per serving</p>
+          <p className="flex justify-between items-baseline -mt-2">
+            <span className="text-4xl">Calories</span>{" "}
+            <span className="text-5xl"> 330</span>
+          </p>
+        </div>
         <table
           className="nutrition-table bg-white border-collapse text-lg text-stone-800
         
-        my-3 
+        mb-3 
         table-auto font-systemsans
         "
         >
@@ -62,9 +74,7 @@ const NutritionTable = ({ blok: nutritionTable }) => {
               <th>
                 <span className="sr-only">nutrient</span>
               </th>
-              <th>
-                <strong>% Daily Value*</strong>
-              </th>
+              <th>% Daily Value*</th>
             </tr>
           </thead>
           <tbody>
