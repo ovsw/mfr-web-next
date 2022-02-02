@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
+  /* @font-face {
     font-family: "Geomanist";
     src: url("../public/fonts/geomanist-regular-webfont.eot");
     src: url("../public/fonts/geomanist-regular-webfont.eot?#iefix")
@@ -32,7 +32,7 @@
         format("svg");
     font-weight: 400;
     font-style: italic;
-  }
+  } */
 
   /* @font-face {
     font-family: "Geomanist";
@@ -63,7 +63,7 @@
     font-style: italic;
   } */
 
-  @font-face {
+  /* @font-face {
     font-family: "Geomanist";
     src: url("../public/fonts/geomanist-medium-webfont.eot");
     src: url("../public/fonts/geomanist-medium-webfont.eot?#iefix")
@@ -91,10 +91,10 @@
         format("svg");
     font-weight: 700;
     font-style: italic;
-  }
+  } */
 
   /* GILROY FONT */
-  @font-face {
+  /* @font-face {
     font-family: "gilroy";
     src: url("../public/fonts/gilroy/gilroy-black-webfont.woff2")
         format("woff2"),
@@ -140,7 +140,7 @@
       url("../public/fonts/gilroy/gilroy-semibold-webfont.woff") format("woff");
     font-weight: 600;
     font-style: normal;
-  }
+  } */
 
   :root {
     --color-mfr-red: 204, 8, 41;
@@ -162,7 +162,7 @@
   h1,
   h2,
   h3 {
-    @apply font-serif text-theme-base;
+    @apply text-theme-base;
   }
 
   /* strong,
@@ -226,7 +226,7 @@
 
   .eyebrow {
     /* @apply text-[46px] md:text-[70px] font-cursive text-theme-accent block; */
-    @apply text-[36px] md:text-[42px] font-cursive text-theme-accent relative;
+    @apply text-[36px] md:text-[42px] font-condensed text-theme-accent relative;
     /* @apply text-xl md:text-[25px]
     tracking-wide
     font-bold 

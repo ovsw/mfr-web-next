@@ -37,7 +37,8 @@ module.exports = {
     fontFamily: {
       // sans: ["Geomanist", "sans-serif"],
       sans: [
-        "gilroy",
+        // "gilroy",
+        "acumin-pro",
         "sans-serif",
         "ui-sans-serif",
         "system-ui",
@@ -55,7 +56,10 @@ module.exports = {
         "Noto Color Emoji",
       ],
       // serif: ["americane"],
-      serif: ["gilroy"],
+      // serif: ["gilroy"],
+      serif: ["acumin-pro"],
+      condensed: ["acumin-pro-condensed"],
+      extraCondensed: ["acumin-pro-extra-condensed"],
       // cursive: ["fave-script-pro", "cursive"],
       cursive: ["Kalam", "cursive"],
       systemsans: [
