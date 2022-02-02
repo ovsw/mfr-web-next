@@ -52,7 +52,7 @@ const Hoagie = ({ blok: hoagie }) => {
               </p>
             </div>
 
-            <p className="prose prose-lg prose-indigo text-gray-500 lg:max-w-lg">
+            <p className="prose prose-xl prose-stone opacity-80  lg:max-w-lg">
               {description}
             </p>
             {link.cached_url != "" && (
