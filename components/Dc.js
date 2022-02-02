@@ -30,6 +30,8 @@ import Step from "./bloks/step"
 import RowMenuTeaserOneOff from "./bloks/row-menu-teaser-one-off"
 import NutritionTable from "./bloks/nutrition-table"
 import FeatureGroup from "./bloks/feature-group"
+import FaqList from "./bloks/faq-list"
+import FaqItem from "./bloks/faq-item"
 
 const BlokComponents = {
   page: Page,
@@ -59,6 +61,8 @@ const BlokComponents = {
   "row-menu-teaser-one-off": RowMenuTeaserOneOff,
   "nutrition-table": NutritionTable,
   "feature-group": FeatureGroup,
+  "faq-list": FaqList,
+  "faq-item": FaqItem,
 }
 
 const Dc = ({ blok }) => {
