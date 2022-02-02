@@ -47,7 +47,7 @@ const Button = ({ blok: button }) => {
     <Icon
       name={icon}
       height="1.5em"
-      width={true}
+      width="true"
       title="icon"
       className="mr-3"
     />
@@ -56,7 +56,7 @@ const Button = ({ blok: button }) => {
     <Icon
       name={icon}
       height="1.5em"
-      width={true}
+      width="true"
       title="icon"
       className="ml-3"
     />
