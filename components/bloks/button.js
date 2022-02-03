@@ -86,7 +86,7 @@ const Button = ({ blok: button }) => {
       <Link
         href={
           destinationPageUrl != undefined
-            ? `${destinationPageUrl}${anchor ? `#${anchor}` : ""}`
+            ? `/${destinationPageUrl}${anchor ? `#${anchor}` : ""}`
             : "#UNDEFINED-LINK"
         }
         scroll={anchor != undefined ? false : true}
