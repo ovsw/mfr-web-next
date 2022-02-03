@@ -8,7 +8,7 @@ import { SectionThemeContext } from "./section"
 
 const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
   // console.log("MainHeadingGroup component", mainHeadingGroup)
-  const { eyebrow, title, subtitle } = mainHeadingGroup
+  const { eyebrow, title, anchor_id } = mainHeadingGroup
 
   // dynamic styles based on section theme
   const sectionTheme = React.useContext(SectionThemeContext)
@@ -23,6 +23,7 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
 
   return (
     <div className={rootStyles}>
+      {anchor_id && <span id={anchor_id}></span>}
       <h2>
         {eyebrow && (
           <span

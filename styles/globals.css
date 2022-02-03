@@ -152,6 +152,9 @@
     --color-white: 255, 255, 255;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply text-theme-body;
   }
@@ -180,6 +183,13 @@
     @apply before:absolute
     before:-inset-2
     before:shadow-focus before:rounded-xl outline-none;
+  }
+
+  :target {
+    display: block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
   }
 }
 

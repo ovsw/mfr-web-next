@@ -32,6 +32,7 @@ import NutritionTable from "./bloks/nutrition-table"
 import FeatureGroup from "./bloks/feature-group"
 import FaqList from "./bloks/faq-list"
 import FaqItem from "./bloks/faq-item"
+import Anchor from "./bloks/anchor"
 
 const BlokComponents = {
   page: Page,
@@ -63,6 +64,7 @@ const BlokComponents = {
   "feature-group": FeatureGroup,
   "faq-list": FaqList,
   "faq-item": FaqItem,
+  anchor: Anchor,
 }
 
 const Dc = ({ blok }) => {

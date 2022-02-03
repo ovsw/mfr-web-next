@@ -6,6 +6,7 @@
 
 import * as React from "react"
 import { SectionThemeContext } from "./section"
+// import { string_to_slug } from "../../lib/utils"
 
 const headingLevelStyles = {
   h1: "text-5xl",
@@ -29,6 +30,7 @@ const Heading = ({ blok: heading }) => {
     <HeadingLevel
       className={`${headingLevelStyles[HeadingStyle]} ${rootStyles} font-bold`}
     >
+      {heading.anchor_id && <span id={heading.anchor_id}></span>}
       {heading.title}
     </HeadingLevel>
   )

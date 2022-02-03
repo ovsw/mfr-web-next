@@ -18,7 +18,7 @@ import Icon from "../Icon"
 const Button = ({ blok: button }) => {
   // console.log("button component", button)
 
-  const { url, linktype, cached_url } = button.link
+  const { anchor, url, linktype, cached_url } = button.link
   const { target, style, text, icon, icon_position } = button
 
   const styleVariants = {
@@ -50,6 +50,8 @@ const Button = ({ blok: button }) => {
     <Icon name={icon} height="1.5em" width title="icon" className="ml-3" />
   )
 
+  // console.log("link object", button.link?.anchor)
+
   // RETURN DIFFERENT TYPES OF BUTTONS
   if (linktype === "email") {
     // Email links: add `mailto:` scheme and map to <a>
@@ -79,14 +81,15 @@ const Button = ({ blok: button }) => {
     // link to internal page
     // special case where the link points to the home page, which has a Cached URL of 'home'
     // but no actual SLUG to link to
-    const destinationPageUrl = cached_url === "home" ? "/" : url
+    const destinationPageUrl = cached_url === "home" ? "/" : cached_url
     return (
       <Link
         href={
           destinationPageUrl != undefined
-            ? destinationPageUrl
+            ? `${destinationPageUrl}${anchor ? `#${anchor}` : ""}`
             : "#UNDEFINED-LINK"
         }
+        scroll={anchor != undefined ? false : true}
       >
         <a target={target ? "_blank" : undefined} className={btnStyles}>
           {icon_position == "left" && LeftIcon}
