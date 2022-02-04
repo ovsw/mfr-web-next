@@ -1,0 +1,12 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    [
+      "@svgr/babel-plugin-remove-jsx-attribute",
+      {
+        "elements": ["svg"],
+        "attributes": ["width"]
+      }
+    ]
+  ]
+}

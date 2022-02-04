@@ -20,9 +20,11 @@ const Row = ({ blok: rowCta }) => {
   return (
     <div className={`${textStyles}  flex`}>
       {/* <h2>This is a two column rowCta</h2> */}
-      <div className={`md:flex gap-8 justify-between  items-center`}>
-        <div className="space-y-12 max-w-2xl">
-          {blockIterator(content_main)}
+      <div
+        className={`md:flex gap-8 justify-between  items-center min-h-[290px]`}
+      >
+        <div className="space-y-8 max-w-2xl">
+          <div className="space-y-4">{blockIterator(content_main)}</div>
           {blockIterator(content_buttons)}
         </div>
       </div>
@@ -30,9 +32,9 @@ const Row = ({ blok: rowCta }) => {
       {/* image */}
       <div
         className="
-        absolute -top-[160px] -bottom-28 right-0 z-40
+        absolute -top-[176px] -bottom-20 right-0 z-40
           md:pt-0 
-         aspect-[800/889]
+         aspect-[1/1]
         "
       >
         <Image
@@ -40,7 +42,7 @@ const Row = ({ blok: rowCta }) => {
           src={image?.filename}
           height="100%"
           width="100%"
-          fluid={[800, 889]}
+          fluid={832}
           focus={image?.focus}
         />
       </div>
