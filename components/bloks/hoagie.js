@@ -3,13 +3,14 @@
 
 import { Image } from "@storyofams/storyblok-toolkit"
 import Link from "next/link"
+import Icon from "../Icon"
 
 // import * as React from "react"
 
 const Hoagie = ({ blok: hoagie }) => {
   // console.log("hoagie", hoagie.link)
 
-  const { name, dressing, description, link, image } = hoagie
+  const { name, dressing, description, link, image, type } = hoagie
 
   const reversed = false
   const contentStyles = reversed ? "lg:col-start-2" : ""
@@ -58,7 +59,16 @@ const Hoagie = ({ blok: hoagie }) => {
             {link.cached_url != "" && (
               <div className="inline-grid">
                 <Link href={`/${link.cached_url}`}>
-                  <a className="btn btn-accent">Details</a>
+                  <a className="btn btn-accent">
+                    <Icon
+                      name={type}
+                      height="1.5em"
+                      width
+                      title="icon"
+                      className="mr-3"
+                    />
+                    Details
+                  </a>
                 </Link>
               </div>
             )}
