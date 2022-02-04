@@ -33,6 +33,7 @@ import FeatureGroup from "./bloks/feature-group"
 import FaqList from "./bloks/faq-list"
 import FaqItem from "./bloks/faq-item"
 import Anchor from "./bloks/anchor"
+import CustomTable from "./bloks/table"
 
 const BlokComponents = {
   page: Page,
@@ -65,6 +66,7 @@ const BlokComponents = {
   "faq-list": FaqList,
   "faq-item": FaqItem,
   anchor: Anchor,
+  table: CustomTable,
 }
 
 const Dc = ({ blok }) => {

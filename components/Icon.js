@@ -2,6 +2,7 @@ import React from "react"
 
 import BookSpells from "./icons/book-spells.svg"
 
+import ChefHat from "./icons/chef-hat.svg"
 import ChevronLeft from "./icons/chevron-left.svg"
 import ChevronRight from "./icons/chevron-right.svg"
 
@@ -28,10 +29,12 @@ import PaperPlane from "./icons/paper-plane.svg"
 import PhoneRinging from "./icons/phone-ringing.svg"
 import Pizza from "./icons/pizza.svg"
 import PriceTag from "./icons/price-tag.svg"
+import Search from "./icons/search.svg"
 import ShareArrow from "./icons/share-arrow.svg"
 
 const iconTypes = {
   "book-spells": BookSpells,
+  "chef-hat": ChefHat,
   "chevron-left": ChevronLeft,
   "chevron-right": ChevronRight,
   "delivery-truck": DeliveryTruck,
@@ -50,6 +53,7 @@ const iconTypes = {
   "phone-ringing": PhoneRinging,
   pizza: Pizza,
   "price-tag": PriceTag,
+  search: Search,
   share: ShareArrow,
 }
 
