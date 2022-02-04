@@ -18,7 +18,7 @@ const FaqItem = ({ blok: faqItem }) => {
             <Disclosure.Button className="text-left w-full flex justify-between items-center text-gray-500">
               <span
                 className={`font-semibold text-2xl  ${
-                  !open ? "text-gray-700" : "text-accent-500"
+                  !open ? "text-gray-600 " : "text-accent-500 opacity-70"
                 }`}
               >
                 {faqItem.question}
@@ -35,7 +35,7 @@ const FaqItem = ({ blok: faqItem }) => {
             </Disclosure.Button>
           </dt>
           <Disclosure.Panel as="dd" className="mt-2 pr-12">
-            <div className="prose prose-stone prose-xl">
+            <div className="prose prose-stone prose-xl opacity-70">
               <RichTextRenderer data={faqItem.answer_single} />
             </div>
           </Disclosure.Panel>
