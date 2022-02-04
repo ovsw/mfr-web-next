@@ -1,7 +1,7 @@
 import { Image } from "@storyofams/storyblok-toolkit"
 import SectionBrush1 from "../svg/section-brush-1"
 
-const HeroTemplate = ({ background_image, children, border_color }) => {
+const HeroTemplate = ({ background_image, children, border_color, height }) => {
   // console.log("background_image", background_image)
 
   const brushBorderThemes = {
@@ -9,6 +9,12 @@ const HeroTemplate = ({ background_image, children, border_color }) => {
     shaded: "fill-theme-offWhite",
     green: "fill-theme-primary",
     red: "fill-theme-accent",
+  }
+
+  const heightStyles = {
+    default: "py-16 sm:py24 lg:py-64",
+    tall: "py-16 sm:py24 lg:py-80",
+    short: "py-16 sm:py24 lg:py-40",
   }
   // const dynamicBrushStyles =
   //   border_color !== undefined
@@ -18,16 +24,16 @@ const HeroTemplate = ({ background_image, children, border_color }) => {
   return (
     <div className="Hero">
       <div className="relative bg-stone-300">
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-600" />
+        <div className="" />
         {/* IMAGE */}
         {background_image?.filename && (
-          <div className="absolute inset-0">
+          <div className="absolute inset-x-0 bottom-2 top-0">
             <Image
               src={background_image?.filename}
               alt={background_image?.alt}
               height="100%"
               width="100%"
-              fluid={1920}
+              fluid={2000}
               focus={background_image?.focus}
               className=""
             />
@@ -38,7 +44,9 @@ const HeroTemplate = ({ background_image, children, border_color }) => {
 
         <div className="max-w-7xl mx-auto ">
           <div className="relative sm:overflow-hidden">
-            <div className="relative px-4 py-16 sm:px-6 sm:py-24  lg:py-80 lg:px-8 text-white">
+            <div
+              className={`relative px-4 sm:px-6 lg:px-8 text-white ${heightStyles[height]}`}
+            >
               {children}
             </div>
           </div>

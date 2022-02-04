@@ -3,7 +3,7 @@
 // *************************
 // - content: Bloks
 // - background_image: Asset (image)
-// - is_tall: Boolean - adds extra padding to the hero to make it bigger (ie: homepage)
+// - height: string
 
 import HeroTemplate from "../common/hero-template"
 import RichTextRenderer from "@/components/richTextRenderer"
@@ -12,7 +12,7 @@ import { blockIterator } from "../../utils/blockIterator"
 const Hero = ({ blok: hero }) => {
   // console.log("hero component", hero)
 
-  const { background_image, buttons, is_tall, text, title, border_color } = hero
+  const { background_image, buttons, height, text, title, border_color } = hero
 
   return (
     <>
@@ -22,6 +22,7 @@ const Hero = ({ blok: hero }) => {
         text={text}
         buttons={buttons}
         border_color={border_color}
+        height={height}
       >
         <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
           <span className="block text-tertiary-400 lg:max-w-xl tracking-wide">
