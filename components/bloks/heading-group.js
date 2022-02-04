@@ -27,7 +27,7 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
       <h2>
         {eyebrow && (
           <span
-            className={`eyebrow leading-none inline-block ${
+            className={`eyebrow leading-none inline-block -ml-1 ${
               eyebrowColorsFromBgValue[sectionTheme.bgValue]
             }`}
           >
@@ -38,7 +38,7 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
         <span
           className={`
           block
-          pt-4 md:pt-0 mb-20
+          pt-4 md:pt-0 mb-20 mt-3 
           text-[46px] leading-none
           md:text-[61px] 
           font-bold
