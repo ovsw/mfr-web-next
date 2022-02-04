@@ -152,6 +152,14 @@
     --color-white: 255, 255, 255;
   }
 
+  #c-submit-button {
+    @apply px-6 py-4 text-xl bg-accent-500;
+  }
+  .cognito .c-label label,
+  .cognito .c-label {
+    @apply !text-lg;
+  }
+
   html {
     scroll-behavior: smooth;
   }
