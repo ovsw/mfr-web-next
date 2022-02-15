@@ -63,7 +63,6 @@ const Hoagie = ({ blok: hoagie }) => {
                     <Icon
                       name={type}
                       height="1.5em"
-                      width
                       title="icon"
                       className="mr-3"
                     />
