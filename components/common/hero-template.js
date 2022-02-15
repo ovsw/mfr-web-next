@@ -37,7 +37,7 @@ const HeroTemplate = ({ background_image, children, border_color, height }) => {
               focus={background_image?.focus}
               className=""
             />
-            <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-500 via-gray-100 to-transparent" />
+            <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-500 via-gray-100 to-transparent sm:from-gray-600 sm:via-gray-200 sm:to-transparent" />
           </div>
         )}
         {/* END IMAGE */}

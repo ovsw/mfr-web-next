@@ -24,13 +24,13 @@ const Hero = ({ blok: hero }) => {
         border_color={border_color}
         height={height}
       >
-        <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
+        <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none">
           <span className="block text-tertiary-400 lg:max-w-xl tracking-wide">
             {title}
           </span>
           {/* <span className="block text-green-200">customer support</span> */}
         </h1>
-        <div className="mt-6 xl:max-w-lg text-left text-xl text-stone-400 leading-relaxed tracking-wide">
+        <div className="mt-6  text-left text-xl text-stone-400 leading-relaxed tracking-wide max-w-sm md:max-w-lg">
           <RichTextRenderer data={text} />
         </div>
 
