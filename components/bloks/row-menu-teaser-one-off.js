@@ -27,7 +27,35 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
       </div>
 
       {/* ROW WRAPPER */}
-      <div className="relative full-width pt-32">
+      <div className="relative full-width pt-14 lg:pt-32">
+
+        {/* HOAGIE IMAGE */}
+        <div
+          className="
+            lg:absolute lg:-top-40 lg:w-1/2
+            lg:right-0
+            "
+        >
+          <div
+            className="
+            w-full lg:w-[1717px]
+            object-cover
+            max-w-[100vw]
+          "
+          >
+            <Image
+              className=""
+              src={image_1?.filename}
+              height="100%"
+              width="100%"
+              fluid={[1717, 1087]}
+              focus={image_1?.focus}
+            />
+            {/* {console.log("image?.focus}", image?.focus)} */}
+          </div>
+        </div>
+        {/* END IMAGE */}
+
         {/* CONTENT: container that turns to a 2-col grid on lg*/}
         <div
           className="
@@ -53,38 +81,13 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
         </div>
         {/* END CONTENT */}
 
-        {/* HOAGIE IMAGE */}
-        <div
-          className="
-            lg:absolute lg:-top-40 lg:w-1/2
-            lg:right-0
-            "
-        >
-          <div
-            className="
-            w-[1717px]
-            object-cover
-            
-          "
-          >
-            <Image
-              className=""
-              src={image_1?.filename}
-              height="100%"
-              width="100%"
-              fluid={[1717, 1087]}
-              focus={image_1?.focus}
-            />
-            {/* {console.log("image?.focus}", image?.focus)} */}
-          </div>
-        </div>
-        {/* END IMAGE */}
+        
       </div>
 
       {/* ************* */}
       {/* PIZZA */}
       {/* ROW WRAPPER */}
-      <div className="relative full-width pt-60">
+      <div className="relative full-width lg:pt-60">
         {/* CONTENT WRAPPER: container that turns to a 2-col grid on lg*/}
         <div
           className="
@@ -96,6 +99,39 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
           lg:py-40 
         "
         >
+
+          {/* PIZZA IMAGE COLUMN*/}
+          <div
+            className="
+            lg:col-start-1 lg:-top-40 
+            lg:left-0
+            relative
+            z-0
+            "
+          >
+            <div
+              className="
+            w-full lg:w-[1167px]
+            object-cover
+            lg:absolute
+            lg:right-0
+            lg:-top-60
+            z-0
+            max-w-[100vw] px-10 lg:px-0
+          "
+            >
+              <Image
+                className=""
+                src={image_2?.filename}
+                height="100%"
+                width="100%"
+                fluid={[1167, 1158]}
+                focus={image_2?.focus}
+              />
+            </div>
+          </div>
+          {/* END IMAGE */}
+
           {/* TEXT CONTENT COLUMN */}
           {/* only thios column is used to place the text content (the one below)
           while the image is absolutely positioned to the parent of this elemenmt */}
@@ -111,36 +147,7 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
             </div>
           </div>
 
-          {/* PIZZA IMAGE COLUMN*/}
-          <div
-            className="
-            lg:col-start-1 lg:-top-40 
-            lg:left-0
-            relative
-            z-0
-            "
-          >
-            <div
-              className="
-            w-[1167px]
-            object-cover
-            lg:absolute
-            lg:right-0
-            lg:-top-60
-            z-0
-          "
-            >
-              <Image
-                className=""
-                src={image_2?.filename}
-                height="100%"
-                width="100%"
-                fluid={[1167, 1158]}
-                focus={image_2?.focus}
-              />
-            </div>
-          </div>
-          {/* END IMAGE */}
+          
         </div>
         {/* END CONTENT */}
       </div>
