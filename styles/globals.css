@@ -203,8 +203,8 @@
 
 @layer components {
   .btn {
-    @apply relative inline-flex items-center justify-center 
-    px-4 py-3 sm:px-6 sm:py-[20px]
+    @apply relative flex md:inline-flex items-start justify-center 
+    px-4 pt-4 pb-3 sm:px-6 sm:pt-[20px] sm:pb-[17px]
     leading-tight
     border border-transparent 
     text-[18px] font-bold font-serif 

@@ -30,8 +30,8 @@ const Button = ({ blok: button }) => {
   }
 
   const iconStyles = {
-    left: "pl-6 sm:py-[18px]",
-    right: "pr-6 sm:py-[18px]",
+    left: "pl-6 ",
+    right: "pr-6 ",
     none: "",
   }
 

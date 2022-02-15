@@ -10,7 +10,7 @@ const ButtonGroup = ({ blok: buttonGroup }) => {
   // console.log("buttonGroup component", buttonGroup)
 
   return (
-    <div className="py-4 flex space-x-4">
+    <div className="py-4 sm:flex sm:space-x-4 space-y-4 sm:space-y-0">
       {blockIterator(buttonGroup.content)}
     </div>
   );
