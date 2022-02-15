@@ -29,24 +29,19 @@ const RowThreeSteps = ({ blok: row }) => {
                 <Image src={step.image?.filename} width="200" />
               </div>
 
-              <div className="pl-20">
-                <h3 className="text-3xl relative">
+              <div className="md:pl-20">
+                <h3 className="text-3xl flex align-baseline">
                   <span
-                    className="block
-                  text-2xl  w-[1.2em]
-                  lg:text-3xl  
-                  absolute font-semibold bg-themeFill-accent text-white rounded-full text-center top-2
-                   
-                  "
+                    className="bg-accent rounded-full w-[1.7em] leading-[1.4em] text-center text-white mr-4"
                   >
                     {i + 1}
                   </span>
 
-                  <span className="inline-block pt-2 pl-20 md:pl-12">
+                  <span className="inline-block leading-[1.4em] py-1">
                     {step.title}
                   </span>
                 </h3>
-                <div className="pl-24 md:pl-14 pt-4 custom-list-bullets text-lg">
+                <div className="pl-20 md:pl-14 pt-4 custom-list-bullets text-lg">
                   <RichTextRenderer data={step.description} className="" />
                 </div>
               </div>
@@ -56,7 +51,7 @@ const RowThreeSteps = ({ blok: row }) => {
       </div>
 
       {/* dotted path */}
-      <DottedPathSteps className="w-full absolute top-60 h-32" />
+      <DottedPathSteps className="hidden md:block w-full absolute top-60 h-32" />
     </div>
   )
 }

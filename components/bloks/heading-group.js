@@ -38,7 +38,7 @@ const MainHeadingGroup = ({ blok: mainHeadingGroup }) => {
         <span
           className={`
           block
-          pt-4 md:pt-0 mb-20 mt-3 
+          pt-4 md:pt-0 mb-10 md:mb-20 mt-3 
           text-[46px] leading-none
           md:text-[61px] 
           font-bold
