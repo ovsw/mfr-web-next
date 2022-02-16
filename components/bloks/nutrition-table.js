@@ -20,6 +20,7 @@ const NutritionTable = ({ blok: nutritionTable }) => {
       : ""
 
   const {
+    calories,
     fat,
     fat_per,
     saturated_fat,
@@ -59,7 +60,7 @@ const NutritionTable = ({ blok: nutritionTable }) => {
           <p className="text-lg">Amount per serving</p>
           <p className="flex justify-between items-baseline -mt-2">
             <span className="text-4xl">Calories</span>{" "}
-            <span className="text-5xl"> 330</span>
+            <span className="text-5xl">{calories}</span>
           </p>
         </div>
         <table
