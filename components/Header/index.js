@@ -285,9 +285,9 @@ const aboutUs = [
     icon: QuestionMarkCircleIcon,
   },
   {
-    name: "Testimonials",
+    name: "Success Stories",
     description: "Hear from the Hoagie Heroes.",
-    href: "/testimonials",
+    href: "/success-stories",
     icon: QuestionMarkCircleIcon,
   },
 ]
