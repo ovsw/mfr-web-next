@@ -54,10 +54,9 @@ const FeatureGroup = ({ blok: featureGroup }) => {
       >
         <Icon
           name={icon}
-          height="1.5em"
-          width
+          
           title="icon"
-          className="mr-4 pb-1"
+          className="mr-4 "
         />
         {heading}
       </HeadingLevel>
