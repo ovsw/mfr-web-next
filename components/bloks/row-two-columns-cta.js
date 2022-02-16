@@ -31,7 +31,7 @@ const Row = ({ blok: rowCta }) => {
 
       {/* image */}
       <div
-        className="
+        className=" hidden sm:block
         absolute -top-[176px] -bottom-20 right-0 z-40
           md:pt-0 
          aspect-[1/1]

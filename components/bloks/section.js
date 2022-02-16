@@ -58,28 +58,28 @@ const Section = ({ blok: section }) => {
 
   // top styles
   const topMarginStyles = {
-    default: "mt-20",
-    none: "aaa",
-    large: "mt-36",
+    default: "mt-10 sm:mt-20",
+    none: "",
+    large: "mt-10 sm:mt-36",
     overlapping: "-mt-32",
   }
   const topPaddingStyles = {
-    default: "pt-20",
+    default: "pt-10 sm:pt-20",
     none: "",
-    large: "pt-36",
+    large: "pt-10 sm:pt-36",
   }
 
   // bottom styles
   const bottomMarginStyles = {
-    default: "mb-20",
+    default: "mb-10 sm:mb-20",
     none: "",
     large: "mb-36",
     overlapping: "-mb-20",
   }
   const bottomPaddingStyles = {
-    default: "pb-20",
+    default: "pb-10 sm:pb-20",
     none: "",
-    large: "pb-36",
+    large: "pb-20 sm:pb-36",
     larger: "pb-56",
   }
 
@@ -116,7 +116,7 @@ const Section = ({ blok: section }) => {
   return (
     <SectionThemeContext.Provider value={themeContextValues}>
       <section
-        className={`px-4 lg:px-8 2xl:px-0
+        className={`SECTION px-4 lg:px-8 2xl:px-0
         ${bgStyles[background]} 
 
         ${topMarginStyles[margin_top]} 

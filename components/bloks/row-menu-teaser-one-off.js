@@ -20,8 +20,8 @@ const RowMenuTeaserOneOff = ({ blok: rowMenuTeaserOneOff }) => {
   const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : ""
 
   return (
-    <div className={`${textStyles} pb-60`}>
-      <div className="relative z-30 ">
+    <div className={`${textStyles}  lg:pb-60`}>
+      <div className="relative z-30 space-y-10">
         {blockIterator(heading)}
         <div className="max-w-3xl">{blockIterator(intro)}</div>
       </div>

@@ -29,7 +29,7 @@ const Row = ({ blok: rowBigImage }) => {
 
   const alternateImageStyles = is_reversed ? "lg:left-0" : "lg:right-0"
 
-  const paddingStyles = extra_padding ? "pt-12 pb-16 px-4 sm:pt-16 sm:px-6" : ""
+  const paddingStyles = extra_padding ? "sm:pt-12 pb-14 px-4 sm:pt-14 sm:px-6" : "pt-5 pb-14"
 
   return (
     <div className="relative">
@@ -41,7 +41,7 @@ const Row = ({ blok: rowBigImage }) => {
       >
         <div className={`${alternateContentColumnStyles}`}>
           <div
-            className={`text-base max-w-prose mx-auto lg:max-w-lg ${alternateContentWrapperStyles} space-y-16`}
+            className={`text-base max-w-prose mx-auto lg:max-w-lg ${alternateContentWrapperStyles} space-y-12`}
           >
             {blockIterator(content)}
           </div>
@@ -54,8 +54,8 @@ const Row = ({ blok: rowBigImage }) => {
         className={`lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
       >
         <div
-          className="h-56 w-full object-fit lg:absolute lg:h-full 
-        before:block before:absolute before:-inset-1 before:rotate-[-1deg] 
+          className="w-full object-fit lg:absolute lg:h-full 
+          aspect-square
         "
         >
           <Image

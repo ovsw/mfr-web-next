@@ -17,7 +17,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
 
   // console.log("testimonials_list", testimonials_list);
   return (
-    <div className="container mx-auto py-20">
+    <div className="container mx-auto pt-10 sm:pt-20">
       <div className="flex">
         <div className="max-w-lg">{heading && blockIterator(heading)}</div>
         <div className="flex gap-4 items-center ml-10 pb-1">
@@ -48,7 +48,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
 
         {/* IMAGE */}
         <div
-          className="
+          className="hidden sm:block
         absolute -top-24 -bottom-20 right-0 z-40
           md:pt-0 
          aspect-[668/872]

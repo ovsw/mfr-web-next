@@ -21,7 +21,7 @@ const RowThreeSteps = ({ blok: row }) => {
   return (
     <div className={textStyles}>
       {/* <h2>This is a thre column row</h2> */}
-      <div className="flex flex-col md:flex-row space-y-14 md:space-y-0 mb-28 relative z-30 pt-5">
+      <div className="STEPS-ROW-WRAPPER sm:flex sm:flex-col md:flex-row sm:space-y-14 md:space-y-0 sm:mb-28 relative z-30 ">
         {row.steps.map((step, i) => {
           return (
             <div className="w-full md:w-1/3" key={i}>
