@@ -6,7 +6,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-const DesktopDropdown = ({ title, items }) => {
+const DesktopDropdown = ({ title, items, description }) => {
   return (
     <Popover className="relative">
       {({ open }) => (
@@ -47,7 +47,7 @@ const DesktopDropdown = ({ title, items }) => {
                   <div className="py-14 pl-6 pr-4 bg-tertiary-300  min-w-max">
                     <p className="text-3xl text-stone-600 font-bold">{title}</p>
                     <p className="text-base mt-2 text-stone-500 max-w-[200px] font-medium">
-                      Lorem ipsum dolor sit amet consequitur adipiscit elit.
+                      {description}
                     </p>
                   </div>
 
