@@ -229,12 +229,15 @@
   }
   .btn-outlined-accent {
     @apply bg-white text-theme-accent 
-    hover:bg-red-700 hover:text-white;
+    hover:bg-red-700 hover:text-white ring-2 ring-accent;
+  }
+  .btn-outlined-primary {
+    @apply bg-white text-primary 
+    hover:bg-primary-600 hover:text-white ring-2 ring-primary ring-inset;
   }
 
   .btn-small {
-    @apply px-4 py-3 sm:px-[20px] sm:py-[12px] text-[16px]
-    ring-2 ring-accent;
+    @apply px-4 py-3 sm:px-[20px] sm:py-[12px] text-[16px] !align-baseline;
   }
 
   .btn-dark {

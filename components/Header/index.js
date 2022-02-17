@@ -70,14 +70,26 @@ const Header = ({ props }) => {
 
           {/* DESKTOP NAV */}
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <DesktopDropdown title="Fundraisers" items={fundraisers} description="We offer 14” famous hoagies and 12” delicious pizzas for your fundraising needs. You'll love how easy they are to sell and your customers will love the variety." />
+            <DesktopDropdown
+              title="Fundraisers"
+              items={fundraisers}
+              description="We offer 14” famous hoagies and 12” delicious pizzas for your fundraising needs. You'll love how easy they are to sell and your customers will love the variety."
+            />
 
             <Link href="/menu">
               <a className="main-menu-item text-stone-800">Menu</a>
             </Link>
 
-            <DesktopDropdown title="About Us" items={aboutUs} description="We have over 40 years of experience helping groups like yours raise money. We guide you through every step to help you have the best fundraiser possible."/>
-            <DesktopDropdown title="Selling Tools" items={tools}  description="We have a variety of tools to help make your fundraising experience a little easier."/>
+            <DesktopDropdown
+              title="About Us"
+              items={aboutUs}
+              description="We have over 40 years of experience helping groups like yours raise money. We guide you through every step to help you have the best fundraiser possible."
+            />
+            <DesktopDropdown
+              title="Selling Tools"
+              items={tools}
+              description="We have a variety of tools to help make your fundraising experience a little easier."
+            />
 
             <Link href="/contact-us">
               <a className="main-menu-item text-stone-800">Contact Us</a>
@@ -91,17 +103,18 @@ const Header = ({ props }) => {
             >
               Sign in
             </a> */}
-            <a
-              href="/schedule-a-free-tasting"
-              className="
+            <Link href="/schedule-a-free-tasting">
+              <a
+                className="
               ml-8 whitespace-nowrap 
               inline-flex items-center justify-center 
               btn btn-outlined-accent
               btn-small
               "
-            >
-              Book a Free Tasting
-            </a>
+              >
+                Book a Free Tasting
+              </a>
+            </Link>
           </div>
         </div>
         {/* END DESKTOP NAV */}
@@ -146,7 +159,7 @@ const Header = ({ props }) => {
                 {/* fundraisers NAV ITEM SUBITEMS ONLY */}
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
-                    {fundraisers.map(item => (
+                    {mobileMainMenu.map(item => (
                       <a
                         key={item.name}
                         href={item.href}
@@ -170,40 +183,38 @@ const Header = ({ props }) => {
               <div className="py-6 px-5">
                 {/* EXTRA ITEMS MAIN */}
                 <div className="grid grid-cols-2 gap-4">
-                  <a
-                    href="#"
-                    className="text-base font-medium text-stone-900 hover:text-stone-700"
-                  >
-                    Pricing
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-stone-900 hover:text-stone-700"
-                  >
-                    Partners
-                  </a>
-                  <a
-                    href="#"
-                    className="text-base font-medium text-stone-900 hover:text-stone-700"
-                  >
-                    Company
-                  </a>
+                  {mobileSecondaryMenu.map((item, i) => {
+                    return (
+                      <Link key={i} href={item.href}>
+                        <a className="text-base font-medium text-stone-900 hover:text-stone-700">
+                          {item.name}
+                        </a>
+                      </Link>
+                    )
+                  })}
                 </div>
                 {/* END EXTRA ITEMS MAIN */}
 
                 {/* EXTRA ITEMS BUTTONS  */}
                 <div className="mt-6">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center bg-gradient-to-r from-accent to-accent bg-origin-border px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white hover:from-red-700 hover:to-red-700"
-                  >
-                    Sign up
-                  </a>
-                  <p className="mt-6 text-center text-base font-medium text-stone-500">
-                    Existing customer?
-                    <a href="#" className="text-stone-900">
-                      Sign in
+                  <Link href="/schedule-a-free-tasting">
+                    <a className="btn btn-accent btn-small">
+                      <span className="mr-2">
+                        <CalendarIcon className="h-5 w-5" aria-hidden="true" />
+                      </span>
+                      Book Free Tasting
                     </a>
+                  </Link>
+                  <p className="mt-4 text-center text-base font-medium text-stone-500">
+                    {/* Existing customer? */}
+                    <Link href="/get-support">
+                      <a className="btn btn-outlined-primary btn-small">
+                        <span className="mr-2">
+                          <PhoneIcon className="h-5 w-5" aria-hidden="true" />
+                        </span>{" "}
+                        <span className="">Get Support / Contact</span>
+                      </a>
+                    </Link>
                   </p>
                 </div>
                 {/* END EXTRA ITEMS BUTTONS  */}
@@ -234,7 +245,7 @@ const fundraisers = [
     icon: CurrencyDollarIcon,
   },
   {
-    name: "Benefits",
+    name: "The Fundraiser that Sells Itself",
     description: "Why Marianna's truly is 'The Fundraiser that Sells Itself.'",
     href: "/the-fundraiser-that-sells-itself",
     icon: ClipboardCheckIcon,
@@ -264,7 +275,8 @@ const fundraisers = [
 const aboutUs = [
   {
     name: "Fresh & Clean Obsessed",
-    description: "We believe in only offering food that we ourselves love to eat.",
+    description:
+      "We believe in only offering food that we ourselves love to eat.",
     href: "/fresh-and-clean-obsessed",
     icon: SparklesIcon,
   },
@@ -290,8 +302,7 @@ const aboutUs = [
   },
   {
     name: "News & Events",
-    description:
-      "News about our events, promotions, and special offers.",
+    description: "News about our events, promotions, and special offers.",
     href: "/news",
     icon: NewspaperIcon,
   },
@@ -334,7 +345,8 @@ const tools = [
   },
   {
     name: "Get Assistance",
-    description: "Have a question? Need help with your fundraiser? We're one phone call away!",
+    description:
+      "Have a question? Need help with your fundraiser? We're one phone call away!",
     href: "/get-assistance",
     icon: PhoneIcon,
   },
@@ -345,4 +357,23 @@ const tools = [
     href: "/submit-your-order",
     icon: DocumentAddIcon,
   },
+]
+
+const mobileMainMenu = [
+  fundraisers[2],
+  fundraisers[0],
+  fundraisers[1],
+  {
+    name: "Food Menu",
+    href: "/menu",
+    icon: HeartIcon,
+  },
+]
+const mobileSecondaryMenu = [
+  tools[3],
+  aboutUs[1],
+  aboutUs[4],
+  aboutUs[5],
+  aboutUs[0],
+  fundraisers[3],
 ]
