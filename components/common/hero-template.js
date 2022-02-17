@@ -52,7 +52,7 @@ const HeroTemplate = ({ background_image, children, border_color, height }) => {
           </div>
         </div>
         <SectionBrush1
-          className={`absolute -bottom-20 z-30 ${brushBorderThemes[border_color]}`}
+          className={`absolute -bottom-20 z-10 ${brushBorderThemes[border_color]}`}
         />
       </div>
     </div>
