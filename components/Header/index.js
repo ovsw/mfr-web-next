@@ -2,18 +2,29 @@ import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import {
   AnnotationIcon,
+  BookOpenIcon,
+  CalendarIcon,
+  ChartBarIcon,
   ChatAlt2Icon,
   ChatAltIcon,
-  DocumentReportIcon,
+  ClipboardCheckIcon,
+  CurrencyDollarIcon,
+  DocumentAddIcon,
+  DocumentTextIcon,
   HeartIcon,
   InboxIcon,
   MenuIcon,
+  NewspaperIcon,
   PencilAltIcon,
+  PhoneIcon,
   QuestionMarkCircleIcon,
   ReplyIcon,
   SparklesIcon,
   TrashIcon,
   UsersIcon,
+  StarIcon,
+  TemplateIcon,
+  UserGroupIcon,
   XIcon,
 } from "@heroicons/react/outline"
 import Link from "next/link"
@@ -59,14 +70,14 @@ const Header = ({ props }) => {
 
           {/* DESKTOP NAV */}
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <DesktopDropdown title="Fundraisers" items={fundraisers} />
+            <DesktopDropdown title="Fundraisers" items={fundraisers} description="We offer 14” famous hoagies and 12” delicious pizzas for your fundraising needs. You'll love how easy they are to sell and your customers will love the variety." />
 
             <Link href="/menu">
               <a className="main-menu-item text-stone-800">Menu</a>
             </Link>
 
-            <DesktopDropdown title="About Us" items={aboutUs} />
-            <DesktopDropdown title="Selling Tools" items={tools} />
+            <DesktopDropdown title="About Us" items={aboutUs} description="We have over 40 years of experience helping groups like yours raise money. We guide you through every step to help you have the best fundraiser possible."/>
+            <DesktopDropdown title="Selling Tools" items={tools}  description="We have a variety of tools to help make your fundraising experience a little easier."/>
 
             <Link href="/contact-us">
               <a className="main-menu-item text-stone-800">Contact Us</a>
@@ -81,7 +92,7 @@ const Header = ({ props }) => {
               Sign in
             </a> */}
             <a
-              href="#"
+              href="/schedule-a-free-tasting"
               className="
               ml-8 whitespace-nowrap 
               inline-flex items-center justify-center 
@@ -213,82 +224,82 @@ const fundraisers = [
     description:
       "A full rundown of the process, from first contact to delivery.",
     href: "/how-it-works",
-    icon: InboxIcon,
+    icon: QuestionMarkCircleIcon,
   },
   {
     name: "Pricing Info",
     description:
-      "Our pricing structure and ways to get a quote for your fundraiser.",
+      "Our pricing structure and our suggested pricing “You” based concept.",
     href: "/pricing-info",
-    icon: AnnotationIcon,
+    icon: CurrencyDollarIcon,
   },
   {
     name: "Benefits",
-    description: "Why Marianna's truly is 'The Fundraiser that Sells Itself'.",
+    description: "Why Marianna's truly is 'The Fundraiser that Sells Itself.'",
     href: "/the-fundraiser-that-sells-itself",
-    icon: ChatAlt2Icon,
+    icon: ClipboardCheckIcon,
   },
   {
     name: "Fundraiser Resources",
-    description: "Guides and Info on how to runn a succesful fundraiser.",
+    description: "Guides and Info on how to run a successful fundraiser.",
     href: "/fundraiser-resources",
-    icon: QuestionMarkCircleIcon,
+    icon: BookOpenIcon,
   },
   {
     name: "Get Assistance",
     description:
       "Have a question? Need help with your fundraiser? We're one phone call away!",
     href: "/get-assistance",
-    icon: QuestionMarkCircleIcon,
+    icon: PhoneIcon,
   },
   {
-    name: "Schedule Free a Tasting",
+    name: "Schedule a Free Tasting",
     description:
-      "Sample all our famous food, and get a personal consultation from our experts.",
+      "Sample our famous food, and get a personal consultation from our experts.",
     href: "/schedule-a-free-tasting",
-    icon: QuestionMarkCircleIcon,
+    icon: CalendarIcon,
   },
 ]
 
 const aboutUs = [
   {
     name: "Fresh & Clean Obsessed",
-    description: "We believe in only offering food we love to eat ourselves.",
+    description: "We believe in only offering food that we ourselves love to eat.",
     href: "/fresh-and-clean-obsessed",
-    icon: InboxIcon,
+    icon: SparklesIcon,
   },
   {
     name: "Hoagie Heroes",
     description:
       "How we empower people to make a difference for the causes they believe in.",
     href: "/hoagie-heroes",
-    icon: AnnotationIcon,
+    icon: UserGroupIcon,
   },
   {
     name: "How it's Made",
     description: "A look behind the scenes at how the Famous Hoagies are made.",
     href: "/how-it-is-made",
-    icon: ChatAlt2Icon,
+    icon: HeartIcon,
   },
   {
     name: "Our Story and Promise",
     description:
-      "Marianna's is now over 40 years old! How it all began, and why we do it.",
+      "Marianna's is now over 40 years old! How it all began and why we do it.",
     href: "/our-story-and-promise",
-    icon: QuestionMarkCircleIcon,
+    icon: ChatAltIcon,
   },
   {
     name: "News & Events",
     description:
-      "Guides, useful tips and news about our events, promotions and special offers.",
-    href: "#",
-    icon: QuestionMarkCircleIcon,
+      "News about our events, promotions, and special offers.",
+    href: "/news",
+    icon: NewspaperIcon,
   },
   {
     name: "Success Stories",
-    description: "Hear from the Hoagie Heroes.",
+    description: "Hear from some of our Hoagie Heroes.",
     href: "/success-stories",
-    icon: QuestionMarkCircleIcon,
+    icon: StarIcon,
   },
 ]
 
@@ -296,42 +307,42 @@ const tools = [
   {
     name: "10 Steps to Success",
     description:
-      "We believe in only offering food we love to eat ourselves. Learn more about our philosophy.",
+      "We've laid out an easy 10 step process to get you to a successful fundraiser.",
     href: "/10-steps-to-success",
-    icon: InboxIcon,
+    icon: ChartBarIcon,
   },
   {
     name: "Documents and Forms",
     description:
       "Everything you need in terms of paperwork to run a sucessful fundraiser with Marianna's",
     href: "#",
-    icon: AnnotationIcon,
+    icon: DocumentTextIcon,
   },
   {
     name: "Advertising Templates",
     description:
-      "Adverting posters, product labels, social media images to help you advertise and run your fundraiser.",
+      "Advertising posters and social media images to help you spread the word about your fundraiser.",
     href: "/advertising-templates",
-    icon: ChatAlt2Icon,
+    icon: TemplateIcon,
   },
   {
     name: "Fundraiser FAQs",
     description:
-      "Frequent questions and just as many answers - a trove of useful info about running a successful fundraiser.",
+      "Frequent questions and just as many answers – useful info about running a Marianna’s Fundraiser.",
     href: "/fundraiser-frequently-asked-questions",
     icon: QuestionMarkCircleIcon,
   },
   {
-    name: "Get Support",
-    description: "  ",
-    href: "/get-support",
-    icon: QuestionMarkCircleIcon,
+    name: "Get Assistance",
+    description: "Have a question? Need help with your fundraiser? We're one phone call away!",
+    href: "/get-assistance",
+    icon: PhoneIcon,
   },
   {
     name: "Submit Your Order",
     description:
-      "Us this to submit your order to us, once your're done selling.",
+      "Use this to submit your order to us, once you're done selling.",
     href: "/submit-your-order",
-    icon: QuestionMarkCircleIcon,
+    icon: DocumentAddIcon,
   },
 ]
