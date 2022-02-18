@@ -13,12 +13,11 @@ const Page = ({ blok }) => {
 
   return (
     <main>
-      <h1 className="text-5xl font-bold">{title}</h1>
-      {/* {blok.body
-      ? blok.body.map(blok => <DynamicComponent blok={blok} key={blok._uid} />)
-      : null} */}
-      <p>This is a Blog Post.</p>
-      <RichTextRenderer data={body} />
+      <section className="max-w-5xl mx-auto max-w space-y-10">
+        <div className="prose prose-xl">
+          <RichTextRenderer data={body} />
+        </div>
+      </section>
     </main>
   )
 }
