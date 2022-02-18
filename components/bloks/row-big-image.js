@@ -6,10 +6,16 @@
 // bool: "is_reversed"
 
 import * as React from "react"
+import { useState } from "react"
 import { blockIterator } from "../../utils/blockIterator"
 import { Image } from "@storyofams/storyblok-toolkit"
 
 import { SectionThemeContext } from "./section"
+import getVideoId from "get-video-id"
+
+// lightbox stuff
+import FsLightbox from "fslightbox-react"
+import { PlayIcon } from "@heroicons/react/outline"
 
 const Row = ({ blok: rowBigImage }) => {
   // console.log("two column row component", rowBigImage)
@@ -17,8 +23,14 @@ const Row = ({ blok: rowBigImage }) => {
   const sectionTheme = React.useContext(SectionThemeContext)
   const textStyles = sectionTheme.bgValue == "dark" ? "text-white" : ""
 
-  const { content, image, is_reversed, extra_padding, contain_image } =
-    rowBigImage
+  const {
+    content,
+    image,
+    is_reversed,
+    extra_padding,
+    contain_image,
+    youTubeLink = "",
+  } = rowBigImage
 
   const alternateContentWrapperStyles = is_reversed
     ? "lg:ml-auto lg:mr-0"
@@ -29,7 +41,13 @@ const Row = ({ blok: rowBigImage }) => {
 
   const alternateImageStyles = is_reversed ? "lg:left-0" : "lg:right-0"
 
-  const paddingStyles = extra_padding ? "sm:pt-12 pb-14 px-4 sm:pt-14 sm:px-6" : "pt-5 pb-14"
+  const paddingStyles = extra_padding
+    ? "sm:pt-12 pb-14 px-4 sm:pt-14 sm:px-6"
+    : "pt-5 pb-14"
+
+  const [toggler, setToggler] = useState(false)
+
+  const { id } = getVideoId(youTubeLink)
 
   return (
     <div className="relative">
@@ -54,9 +72,10 @@ const Row = ({ blok: rowBigImage }) => {
         className={`lg:absolute  lg:top-0 h-full ${alternateImageStyles} lg:w-1/2 `}
       >
         <div
-          className="w-full object-fit lg:absolute lg:h-full 
-          aspect-square
-        "
+          className={`w-full object-fit lg:absolute lg:h-full 
+          aspect-square group transition ease-in-out ${
+            id && "hover:scale-105"
+          }`}
         >
           <Image
             className="rounded-2xl"
@@ -68,9 +87,57 @@ const Row = ({ blok: rowBigImage }) => {
             fit={contain_image ? "contain" : "cover"}
           />
           {/* {console.log("image?.focus}", image?.focus)} */}
+
+          {/* VIDEO LIGHTBOX */}
+          {id && (
+            <>
+              <button
+                className=" w-full absolute inset-0 flex justify-center items-center 
+                bg-primary-900/40 rounded-2xl
+                
+                "
+                onClick={() => setToggler(!toggler)}
+              >
+                <span
+                  className="text-white relative
+                  transition ease-in-out  delay-50 
+                  group-hover:-translate-y-0 group-hover:scale-150 duration-200
+                  after:bg-white/10x after:w-40 after:h-40 after:rounded-full after:absolute after:inset-0
+                  after:animate-pingx
+                  "
+                >
+                  <PlayIcon
+                    className="w-40 h-40 shadow-sm"
+                    aria-hidden="true"
+                  />
+                  <span className="text-lg">play video</span>
+                </span>
+              </button>
+            </>
+          )}
+          {/* VIDEO LIGHTBOX */}
         </div>
       </div>
       {/* END IMAGE */}
+
+      {/* VIDEO LIGHTBOX SOURCE */}
+      {id && (
+        <FsLightbox
+          toggler={toggler}
+          type="youtube"
+          sources={[
+            <iframe
+              id="custom-source"
+              frameborder="0"
+              width="1920px"
+              height="1080px"
+              allow="autoplay; fullscreen"
+              src={`https://www.youtube.com/embed/${id}?autoplay=1`}
+            ></iframe>,
+          ]}
+        />
+      )}
+      {/* END VIDEO LIGHTBOX SOURCE */}
     </div>
   )
 }
