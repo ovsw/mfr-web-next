@@ -5,7 +5,7 @@ import readingTime from "reading-time"
 
 function PostListFeatured({ posts }) {
   return (
-    <section className="px-4 py-20">
+    <section className="px-4 pb-32">
       <div className="max-w-7xl mx-auto max-w space-y-10">
         <div>
           <h2>
