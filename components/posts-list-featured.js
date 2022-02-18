@@ -58,10 +58,10 @@ function PostListFeatured({ posts }) {
                       </a>
                     </p> */}
                     <a href={full_slug} className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">
+                      <p className="text-2xl font-semibold text-stone-800">
                         {name}
                       </p>
-                      <p className="mt-3 text-base text-gray-500">{excerpt}</p>
+                      <p className="mt-3 text-base text-stone-500">{excerpt}</p>
                     </a>
                   </div>
                   <div className="mt-6 flex items-center">
