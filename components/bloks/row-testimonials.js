@@ -48,7 +48,7 @@ export default function TestimonialsRow({ blok: rowTestimonials }) {
 
         {/* IMAGE */}
         <div
-          className="hidden sm:block
+          className="hidden xl:block
         absolute -top-24 -bottom-20 right-0 z-40
           md:pt-0 
          aspect-[668/872]
