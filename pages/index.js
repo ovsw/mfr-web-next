@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css"
 import Storyblok, { useStoryblok } from "../lib/storyblok"
 import DynamicComponent from "@/components/Dc"
 import { blockIterator } from "utils/blockIterator"
+import PostListFeatured from "@/components/posts-list-featured"
 
 export default function Home({ story, preview, recentPosts }) {
   // console.log("recentPosts", recentPosts)
@@ -12,6 +13,7 @@ export default function Home({ story, preview, recentPosts }) {
   const enableBridge = preview // enable bridge only in prevew mode
 
   story = useStoryblok(story, enableBridge)
+  console.log("posts", recentPosts.stories)
 
   return (
     <div className={styles.container}>
@@ -22,24 +24,7 @@ export default function Home({ story, preview, recentPosts }) {
 
       <DynamicComponent blok={story.content} />
 
-      <section className="px-4 py-20">
-        <div className="max-w-7xl mx-auto max-w space-y-10">
-          <div>
-            <h2>
-              <span className="eyebrow block">Marianna's</span>
-              <span className="block text-6xl font-bold">News & Tips</span>
-            </h2>
-          </div>
-
-          {recentPosts.stories?.map(post => {
-            return (
-              <div key={post.uuid}>
-                <h3>{post.name}</h3>
-              </div>
-            )
-          })}
-        </div>
-      </section>
+      <PostListFeatured posts={recentPosts.stories} />
     </div>
   )
 }
@@ -50,7 +35,7 @@ export async function getStaticProps({ preview = false }) {
   // load the published content outside of the preview mode
   let sbParams = {
     // version: process.env.NODE_ENV == "production" ? "published" : "draft", // or 'published'
-    version: "published", // or 'published'
+    version: "draft", // or 'published'
   }
 
   let recentPostsSbParams = {
@@ -76,6 +61,6 @@ export async function getStaticProps({ preview = false }) {
       preview,
       recentPosts: recentPostsData,
     },
-    revalidate: 3600, // revalidate every hour
+    //revalidate: 3600, // revalidate every hour
   }
 }
