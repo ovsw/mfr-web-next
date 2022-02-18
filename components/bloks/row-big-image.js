@@ -104,12 +104,10 @@ const Row = ({ blok: rowBigImage }) => {
                   group-hover:-translate-y-0 group-hover:scale-150 duration-200
                   after:bg-white/10x after:w-40 after:h-40 after:rounded-full after:absolute after:inset-0
                   after:animate-pingx
+                  drop-shadow-md
                   "
                 >
-                  <PlayIcon
-                    className="w-40 h-40 shadow-sm"
-                    aria-hidden="true"
-                  />
+                  <PlayIcon className="w-40 h-40" aria-hidden="true" />
                   <span className="text-lg">play video</span>
                 </span>
               </button>
@@ -132,7 +130,7 @@ const Row = ({ blok: rowBigImage }) => {
               width="1920px"
               height="1080px"
               allow="autoplay; fullscreen"
-              src={`https://www.youtube.com/embed/${id}?autoplay=1`}
+              src={`https://www.youtube.com/embed/${id}?autoplay=1&rel=0`}
             ></iframe>,
           ]}
         />
