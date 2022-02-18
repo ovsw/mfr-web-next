@@ -27,15 +27,15 @@ const navigation = {
     { name: "Hoagie Heroes", href: "/hoagie-heroes/" },
     { name: "Our Story", href: "/our-story-and-promise/" },
     { name: "News & Events", href: "/blog/" },
-    { name: "Jobs", href: "/" },
+    { name: "Jobs", href: "/jobs" },
     // { name: "Press", href: "#" },
     // { name: "Partners", href: "#" },
   ],
   legal: [
     { name: "Accessibility Statement", href: "#" },
     { name: "Accessibility Policy", href: "#" },
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: "Privacy", href: "/privacy-policy" },
+    { name: "Terms", href: "/terms-and-conditions" },
   ],
   social: [
     {
