@@ -40,8 +40,8 @@ function classNames(...classes) {
 
 const Header = ({ props }) => {
   return (
-    <header>
-      <Popover className="relative bg-white">
+    <header className="shadow-md">
+      <Popover className="relative bg-white ">
         {({ open }) => (
           <>
             {/* <Popover.Overlay
