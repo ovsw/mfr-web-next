@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Image, getPlainText } from "@storyofams/storyblok-toolkit"
 import readingTime from "reading-time"
-// import RichTextRenderer from "./richTextRenderer"
+
+import { blogAuthors } from "../utils/blogAuthors"
 
 function PostListFeatured({ posts }) {
   return (
@@ -18,7 +19,7 @@ function PostListFeatured({ posts }) {
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
           {posts.map(post => {
             const { name, content, full_slug, uuid } = post
-            const { body, date, main_image, excerpt } = content
+            const { body, date, main_image, excerpt, author } = content
 
             const formattedDate = new Date(date).toLocaleDateString("en-US", {
               day: "numeric",
@@ -71,7 +72,7 @@ function PostListFeatured({ posts }) {
 
                       <img
                         className="h-10 w-10 rounded-full"
-                        src="/images/avatars/amy-mearkle.jpg"
+                        src={blogAuthors[author].avatarImage}
                         alt="Amy Mearkle"
                       />
                       {/* </a> */}
@@ -79,7 +80,7 @@ function PostListFeatured({ posts }) {
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-900">
                         {/* <a href="#" className="hover:underline"> */}
-                        Amy Mearkle
+                        {blogAuthors[author].name}
                         {/* </a> */}
                       </p>
                       <div className="flex space-x-1 text-sm text-gray-500">
