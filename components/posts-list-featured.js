@@ -68,7 +68,9 @@ function PostListFeatured({ posts }) {
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
                       {/* <a href="#"> */}
-                      <span className="sr-only">Amy Mearkle</span>
+                      <span className="sr-only">
+                        {blogAuthors[author].name}
+                      </span>
 
                       <img
                         className="h-10 w-10 rounded-full"
