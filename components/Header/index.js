@@ -312,6 +312,12 @@ const aboutUs = [
     icon: HeartIcon,
   },
   {
+    name: "Our Leadership",
+    description: "Need a subtitle for this menu item",
+    href: "/our-leadership",
+    icon: UsersIcon,
+  },
+  {
     name: "Our Story and Promise",
     description:
       "Marianna's is now over 40 years old! How it all began and why we do it.",
