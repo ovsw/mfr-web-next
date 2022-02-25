@@ -43,7 +43,7 @@ const Row = ({ blok: rowBigImage }) => {
 
   const paddingStyles = extra_padding
     ? "sm:pt-12 pb-14 px-4 sm:pt-14 sm:px-6"
-    : "pt-5 pb-14"
+    : "px-5"
 
   const [toggler, setToggler] = useState(false)
 
