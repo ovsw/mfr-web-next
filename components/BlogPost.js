@@ -14,7 +14,8 @@ const Page = ({ blok }) => {
   return (
     <main>
       <section className="max-w-5xl mx-auto max-w space-y-10">
-        <div className="prose prose-xl">
+        <div className="prose prose-xl my-10 mb-20 mx-auto">
+          <h1 className="text-primary">{title}</h1>
           <RichTextRenderer data={body} />
         </div>
       </section>
