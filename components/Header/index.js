@@ -350,7 +350,7 @@ const tools = [
     name: "Documents and Forms",
     description:
       "Everything you need in terms of paperwork to run a sucessful fundraiser with Marianna's",
-    href: "#",
+    href: "/documents-and-forms/",
     icon: DocumentTextIcon,
   },
   {
