@@ -25,7 +25,7 @@ const Hero = ({ blok: hero }) => {
         height={height}
       >
         <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none">
-          <span className="block text-tertiary-400 lg:max-w-xl tracking-wide">
+          <span className="block text-white lg:max-w-xl tracking-wide">
             {title}
           </span>
           {/* <span className="block text-green-200">customer support</span> */}
