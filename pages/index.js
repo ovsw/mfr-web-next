@@ -13,7 +13,6 @@ export default function Home({ story, preview, recentPosts }) {
   const enableBridge = preview // enable bridge only in prevew mode
 
   story = useStoryblok(story, enableBridge)
-  console.log("posts", recentPosts.stories)
 
   return (
     <div className={styles.container}>
