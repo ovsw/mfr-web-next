@@ -24,7 +24,7 @@ const PageHeading = ({ blok: pageHeading }) => {
   }
 
   return (
-    <div className={`text-center`}>
+    <div className={`text-center z-10 relative`}>
       <h1>
         <span
           className={` ${rootStyles}

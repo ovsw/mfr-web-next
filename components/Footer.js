@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import FooterLogo from "../public/images/mariannas-fundraisers-logo-2022-white.png"
+import FooterLogo from "../public/images/mariannas-fundraisers_2022_alt_white_wordmark.png"
 import DelGrossoBadge from "../public/images/from-the-kitchens-of-delgrosso-badge.png"
 
 const navigation = {

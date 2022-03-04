@@ -32,7 +32,7 @@ import Image from "next/image"
 
 import DesktopDropdown from "./nav/deskop-dropdown"
 
-import DesktopLogo from "../../public/images/mariannas-fundraiser-logo-2021-transparent.png"
+import DesktopLogo from "../../public/images/mariannas-fundraisers_2022_alt_wordmark.png"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -40,7 +40,7 @@ function classNames(...classes) {
 
 const Header = ({ props }) => {
   return (
-    <header className="shadow-md">
+    <header className="shadow-md relative z-50">
       <Popover className="relative bg-white ">
         {({ open }) => (
           <>

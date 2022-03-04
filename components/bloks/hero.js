@@ -12,7 +12,15 @@ import { blockIterator } from "../../utils/blockIterator"
 const Hero = ({ blok: hero }) => {
   // console.log("hero component", hero)
 
-  const { background_image, buttons, height, text, title, border_color } = hero
+  const {
+    background_image,
+    buttons,
+    height,
+    text,
+    title,
+    border_color,
+    background_color,
+  } = hero
 
   return (
     <>
@@ -23,6 +31,7 @@ const Hero = ({ blok: hero }) => {
         buttons={buttons}
         border_color={border_color}
         height={height}
+        background_color={background_color}
       >
         <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none ">
           <span className="block text-white lg:max-w-xl tracking-wide">
