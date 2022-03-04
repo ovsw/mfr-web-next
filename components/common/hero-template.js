@@ -1,5 +1,6 @@
 import { Image } from "@storyofams/storyblok-toolkit"
 import SectionBrush1 from "../svg/section-brush-1"
+import SectionBrush2 from "../svg/section-brush-2"
 
 const HeroTemplate = ({ background_image, children, border_color, height }) => {
   // console.log("background_image", background_image)
@@ -12,9 +13,10 @@ const HeroTemplate = ({ background_image, children, border_color, height }) => {
   }
 
   const heightStyles = {
-    default: "py-16 sm:py24 lg:py-64",
-    tall: "py-16 sm:py24 lg:py-80",
-    short: "py-16 sm:py24 lg:py-40",
+    short: "py-16 sm:py-24 lg:py-40",
+    default: "py-16 sm:py-24 lg:py-64",
+    tall: "py-16 sm:py-24 lg:py-80",
+    empty: "py-32 sm:py-36 md:py-60 xl:py-[25vh] 3xl:py-[20vh]",
   }
   // const dynamicBrushStyles =
   //   border_color !== undefined
@@ -37,7 +39,7 @@ const HeroTemplate = ({ background_image, children, border_color, height }) => {
               focus={background_image?.focus}
               className=""
             />
-            <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-500 via-gray-100 to-transparent sm:from-gray-600 sm:via-gray-200 sm:to-transparent" />
+            <div className="absolute inset-0  mix-blend-multiply bg-gradient-to-r from-gray-500 via-gray-100 to-transparent sm:from-gray-100 sm:via-gray-100 sm:to-gray-100" />
           </div>
         )}
         {/* END IMAGE */}

@@ -7,7 +7,7 @@ const SectionBrush2b = ({ fill = "#FFFEFA", className = "" }) => {
       fill="none"
       className={`${className} h-[128px] 2xl:h-auto w-full
       absolute 
-      -bottom-5  
+      -bottom-16  
       2xl:-bottom-10
       left-0
       

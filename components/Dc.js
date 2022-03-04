@@ -35,6 +35,7 @@ import FaqItem from "./bloks/faq-item"
 import Anchor from "./bloks/anchor"
 import CustomTable from "./bloks/table"
 import FormCognito from "./bloks/form-cognito"
+import PageHeading from "./bloks/page-heading"
 
 const BlokComponents = {
   page: Page,
@@ -69,6 +70,7 @@ const BlokComponents = {
   anchor: Anchor,
   table: CustomTable,
   form_cognito: FormCognito,
+  "page-heading": PageHeading,
 }
 
 const Dc = ({ blok }) => {

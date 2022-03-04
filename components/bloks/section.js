@@ -67,6 +67,7 @@ const Section = ({ blok: section }) => {
     default: "pt-10 sm:pt-20",
     none: "",
     large: "pt-10 sm:pt-36",
+    small: "pt-4 md:pt-2",
   }
 
   // bottom styles
@@ -81,6 +82,7 @@ const Section = ({ blok: section }) => {
     none: "",
     large: "pb-20 sm:pb-36",
     larger: "pb-56",
+    small: "pb-14 lg:pb-10",
   }
 
   // to be passed down through context so that child components can know how to adapt their styles

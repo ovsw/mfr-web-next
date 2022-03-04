@@ -7,7 +7,7 @@ const SectionBrush2 = ({ fill = "#FFFEFA", className = "" }) => {
       viewBox="0 0 1920 128"
       className={`${className} h-[128px] 2xl:h-auto w-full
       absolute 
-      -top-[60px] lg:-top-12 
+      -top-[80px] lg:-top-12 
       left-0
       `}
     >

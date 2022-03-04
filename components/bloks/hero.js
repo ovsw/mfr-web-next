@@ -24,7 +24,7 @@ const Hero = ({ blok: hero }) => {
         border_color={border_color}
         height={height}
       >
-        <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none">
+        <h1 className="text-left text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl max-w-sm md:max-w-none ">
           <span className="block text-white lg:max-w-xl tracking-wide">
             {title}
           </span>
