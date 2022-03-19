@@ -38,7 +38,7 @@ export async function getStaticProps({ preview = false }) {
   }
 
   let recentPostsSbParams = {
-    starts_with: "posts",
+    starts_with: "news",
     per_page: "3",
   }
 
